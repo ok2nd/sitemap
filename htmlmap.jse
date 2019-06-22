@@ -1,0 +1,64 @@
+//
+// はてなブログ HTMLサイトマップ（sitemap.html）作成。
+//
+/*
+TITLE: ×××××××××
+BASENAME: 2018/01/10/123456
+*/
+// ↓↓↓
+/*
+<p><a href="https://2ndart.hatenablog.com/entry/2018/01/10/123456">×××××××××</a></p>
+*/
+//
+// UTF-8 文字列入出力のために、ADODB.Stream を使う。
+//
+
+var adTypeText = 2;
+var adSaveCreateOverWrite = 2;	// 上書き
+var adReadAll = -1;		// 全行
+
+var sr1 = new ActiveXObject("ADODB.Stream");
+sr1.Type = adTypeText;
+sr1.charset = "utf-8";
+sr1.Open();
+sr1.LoadFromFile("header.html");
+var html = sr1.ReadText(adReadAll);		// ← header.html
+sr1.Close();
+
+var sr2 = new ActiveXObject("ADODB.Stream");
+sr2.Type = adTypeText;
+sr2.charset = "utf-8";
+sr2.Open();
+sr2.LoadFromFile("2ndart.hatenablog.com.export.txt");	//  はてなブログ エクスポート・ファイル
+var str = sr2.ReadText( adReadAll );
+sr2.Close();
+
+var stw = new ActiveXObject("ADODB.Stream");
+stw.type = adTypeText;
+stw.charset = "utf-8";
+stw.Open();
+
+stw.WriteText(html);				// header.html → sitemap.html
+
+stw.WriteText('\n<ol>\n');
+str = str.replace(/\r/g, '');
+var line_ary = str.split(/\n/);
+var sw = false;
+var title;
+var url;
+for (var i=0; i<line_ary.length; i++) {
+	if (line_ary[i].substring(0,6) == 'TITLE:') {
+		title = line_ary[i].slice(7);
+	}
+	if (line_ary[i].substring(0,9) == 'BASENAME:') {
+		url = line_ary[i].slice(10);
+		sw = true;
+	}
+	if (sw) {
+		stw.WriteText('<li><a href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></li>\n');
+		sw = false;
+	}
+}
+stw.WriteText('</ol>\n</body>\n</html>\n');
+stw.SaveToFile("hatena-sitemap.html", adSaveCreateOverWrite);
+stw.Close();
