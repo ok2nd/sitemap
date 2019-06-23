@@ -23,8 +23,8 @@ var sr1 = new ActiveXObject("ADODB.Stream");
 sr1.Type = adTypeText;
 sr1.charset = "utf-8";
 sr1.Open();
-sr1.LoadFromFile("header-table.html");
-var html = sr1.ReadText(adReadAll);	// ← header-table.html
+sr1.LoadFromFile("i-header-table.html");
+var html = sr1.ReadText(adReadAll);	// ← i-header-table.html
 sr1.Close();
 
 var sr2 = new ActiveXObject("ADODB.Stream");
@@ -40,7 +40,7 @@ stw.type = adTypeText;
 stw.charset = "utf-8";
 stw.Open();
 
-stw.WriteText(html);	// header-table.html → hatena-sitemap-table.html
+stw.WriteText(html);	// i-header-table.html → hatena-sitemap-table.html
 
 stw.WriteText('<tbody>');
 str = str.replace(/\r/g, '');
@@ -55,7 +55,7 @@ for (var i=0; i<line_ary.length; i++) {
 		if (sw_category) {
 			stw.WriteText('\n<tr>');
 			stw.WriteText('\n<td class="category">' + category + '</td>\n');
-			stw.WriteText('<td><a href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></td>');
+			stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></td>');
 			stw.WriteText('\n</tr>');
 			sw_category = false;
 			category = '';
@@ -72,7 +72,6 @@ for (var i=0; i<line_ary.length; i++) {
 		}
 		category += line_ary[i].slice(10);
 	}
-
 }
 stw.WriteText('\n</tbody>\n</table>\n');
 
@@ -80,8 +79,8 @@ var sr3 = new ActiveXObject("ADODB.Stream");
 sr3.Type = adTypeText;
 sr3.charset = "utf-8";
 sr3.Open();
-sr3.LoadFromFile("footer-table.html");
-var footer = sr3.ReadText(adReadAll);	// ← footer-table.html
+sr3.LoadFromFile("i-footer-table.html");
+var footer = sr3.ReadText(adReadAll);	// ← i-footer-table.html
 sr3.Close();
 
 stw.WriteText(footer);
