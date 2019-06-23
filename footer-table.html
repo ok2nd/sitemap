@@ -1,0 +1,19 @@
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<!-- https://datatables.net/blog/2017-01-19 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
+<script type="text/javascript">
+$(function() {
+	var table = $('#dataTable').DataTable({
+		language: {	// 日本語化
+			url: "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+		},
+		paging: false,		// ページングしない。
+		ordering: false,	// ソートしない。
+		mark: true		// 検索文字列ハイライト (by mark.js)
+	});
+});
+</script>
+</body>
+</html>

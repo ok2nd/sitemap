@@ -4,6 +4,8 @@
 /*
 TITLE: ×××××××××
 BASENAME: 2018/01/10/123456
+CATEGORY: ＸＸＸＸＸ
+CATEGORY: ＸＸＸＸＸ
 */
 // ↓↓↓
 /*
@@ -21,8 +23,8 @@ var sr1 = new ActiveXObject("ADODB.Stream");
 sr1.Type = adTypeText;
 sr1.charset = "utf-8";
 sr1.Open();
-sr1.LoadFromFile("header.html");
-var html = sr1.ReadText(adReadAll);	// ← header.html
+sr1.LoadFromFile("header-table.html");
+var html = sr1.ReadText(adReadAll);	// ← header-table.html
 sr1.Close();
 
 var sr2 = new ActiveXObject("ADODB.Stream");
@@ -38,27 +40,51 @@ stw.type = adTypeText;
 stw.charset = "utf-8";
 stw.Open();
 
-stw.WriteText(html);	// header.html → hatena-sitemap.html
+stw.WriteText(html);	// header-table.html → hatena-sitemap-table.html
 
-stw.WriteText('\n<ol>\n');
+stw.WriteText('<tbody>');
 str = str.replace(/\r/g, '');
 var line_ary = str.split(/\n/);
-var sw = false;
+var sw_title = false;
+var sw_category = false;
 var title;
 var url;
+var category = '';
 for (var i=0; i<line_ary.length; i++) {
 	if (line_ary[i].substring(0,6) == 'TITLE:') {
+		if (sw_category) {
+			stw.WriteText('\n<tr>');
+			stw.WriteText('\n<td class="category">' + category + '</td>\n');
+			stw.WriteText('<td><a href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></td>');
+			stw.WriteText('\n</tr>');
+			sw_category = false;
+			category = '';
+		}
 		title = line_ary[i].slice(7);
 	}
 	if (line_ary[i].substring(0,9) == 'BASENAME:') {
 		url = line_ary[i].slice(10);
-		sw = true;
 	}
-	if (sw) {
-		stw.WriteText('<li><a href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></li>\n');
-		sw = false;
+	if (line_ary[i].substring(0,9) == 'CATEGORY:') {
+		sw_category = true;
+		if (category != '') {
+			category += ' ';
+		}
+		category += line_ary[i].slice(10);
 	}
+
 }
-stw.WriteText('</ol>\n</body>\n</html>\n');
-stw.SaveToFile("hatena-sitemap.html", adSaveCreateOverWrite);
+stw.WriteText('\n</tbody>\n</table>\n');
+
+var sr3 = new ActiveXObject("ADODB.Stream");
+sr3.Type = adTypeText;
+sr3.charset = "utf-8";
+sr3.Open();
+sr3.LoadFromFile("footer-table.html");
+var footer = sr3.ReadText(adReadAll);	// ← footer-table.html
+sr3.Close();
+
+stw.WriteText(footer);
+
+stw.SaveToFile("hatena-sitemap-table.html", adSaveCreateOverWrite);
 stw.Close();

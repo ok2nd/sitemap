@@ -1,0 +1,2598 @@
+﻿<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<title>はてなブログ 晴歩雨描 記事一覧</title>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<style>
+body {
+	max-width: 800px;
+	margin: 10px;
+}
+table {
+	width: 100%;
+	font-size: 12px;
+}
+.category {
+	width: 120px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 20px;
+}
+/* 検索文字列ハイライト（mark.js）用*/
+mark {
+	background: gold;
+	color: black;
+}
+</style>
+</head>
+<body>
+<h1>はてなブログ「晴歩雨描」記事一覧</h1>
+<div id="box">
+<table id="dataTable">
+<thead>
+<tr>
+	<td class="category">カテゴリー</td>
+	<td>記事</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="category">ホームページ、Web作成 コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/21/215450">「Google Search Console」のサイトマップ登録の進展がないので、はてなブログのHTMLサイトマップを生成するスクリプト(JScript)を作成した。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/20/214052">京都福知山）丹州観音寺（丹波あじさい寺）。福知山城とまちなか。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/19/094803">「Google Search Console」に続き「Bing - Web マスター ツール」で、サイトマップ登録をやってみる。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/18/143439">「晴歩雨描 デジカメ・スナップ写真 ブログ記事一覧」にjQueryプラグイン「DataTables」で検索機能追加。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/17/232506">はてなブログの記事がGoogle検索になかなか反映されない。「Google Search Console」でインデックス登録とサイトマップ登録をやってみる。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/17/165555">大阪）福島から梅田。LUMIX DMC-GM1＋LEICA 15mm/F1.7（35mm判換算焦点距離30mm）でスナップ写真。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 動物・鳥・昆虫 マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/17/161133">神戸）しあわせの村</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/15/112639">CSSのflexbox（display:flex;）で、写真/画像を横並びにする。inline-blockやfloat:leftは使わない。＋ &lt;div&gt;の横幅一杯に画像を並べてリサイザブル（レスポンシブ）にする。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/14/164745">写真をビビッドに加工する。彩度調整をWindowsアプリ「GIMP」と「JTrim」で試してみる。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/13/163527">「OLYMPUS Tough TG-6」日本国内でも正式発表。オリンパスにはToughシリーズを続けていって欲しい。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/12/203717">大阪岸和田）蜻蛉池公園。あじさい。</a></td>
+</tr>
+<tr>
+<td class="category">サイエンス・自然・宇宙</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/09/102225">太陽系の8つの惑星が自転する様子をCGで再現した動画「Planets of the Solar System: Tilts and Spins」</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/09/085913">TG-5＋フィッシュアイコンバーターFCON-T01＋魚眼補正アプリuonomeと、TG-5＋ロワジャパン0.7倍ワイコンを比較。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/08/163142">魚眼レンズで撮った写真の歪みを補正するWindowsアプリ「uonome」を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 動物・鳥・昆虫 マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/170408">札幌）宮丘公園。北海道大学植物園。</a></td>
+</tr>
+<tr>
+<td class="category">イベント</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/165244">札幌）YOSAKOIソーラン祭り</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/151039">札幌）豊平公園</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 建築物・構造物 旅行 マップ付 大学・学食</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/145552">札幌）北海道大学キャンパス内散策。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 美術・アート マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/143358">札幌芸術の森。砂澤ビッキ展。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/141037">札幌）滝野すずらん丘陵公園</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 動物・鳥・昆虫 マップ付 旅行 食べる 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/125252">札幌）月寒公園。川下公園ライラック。厚別川の川沿い。サッポロビール博物館。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 動物・鳥・昆虫 マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/06/07/123018">札幌）西岡公園。湿原。アカゲラ。エゾハルゼミ。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/31/185856">スマホ ASUS ZenFone Max Pro (M2) 購入。HUAWEI P10 Plusと比較。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸 ウォーキング・散策 鉄道・乗り物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/31/154855">神戸）阪急電車御影駅→六甲駅→王子公園駅→春日野道駅。OLYMPUS Tough TG-5＋フィッシュアイコンバーターFCON-T01でスナップ写真。（２）</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸 ウォーキング・散策 鉄道・乗り物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/31/154246">神戸）阪急電車御影駅→六甲駅→王子公園駅→春日野道駅。OLYMPUS Tough TG-5＋フィッシュアイコンバーターFCON-T01でスナップ写真。（１）</a></td>
+</tr>
+<tr>
+<td class="category">棚田 ハイキング 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/28/201032">岡山県）大垪和西（おおはがにし）の棚田。上籾（かみもみ）の棚田。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/26/082853">WindowsアプリGIMPで、写真のゆがみを補正する。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング 花・植物 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/25/213627">大分県くじゅう）牧ノ戸峠→黒岩山→上泉水山→下泉水山→くじゅう登山口。ミヤマキリシマ。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/25/205928">大分県くじゅう）タデ原湿原散策。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング 里山・田園・田舎 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/25/203648">大分県くじゅう）九州オルレ・九重・やまなみコース</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/25/174534">大分県くじゅう）タデ原湿原、夕方散歩＆朝散歩。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/25/172728">大分県くじゅう）牧の戸峠→沓掛山→くじゅう登山口。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/21/145911">神戸）阪神御影駅周辺でスナップ写真。カメラは、OLYMPUS Tough TG-5＋フィッシュアイコンバーターFCON-T01。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/20/133230">デジカメ）最強スナップシューターは、Panasonic LUMIX GM1＋LEICA 15mm/F1.7（？）。RICOH GR III、FUJIFILM XF10と比較。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/19/174037">神戸須磨離宮公園「春のローズフェスティバル2019」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 京都 花・植物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/18/233718">京都）東福寺（青もみじ）→京都トレイルコース→伏見稲荷。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 京都 イベント</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/18/220906">京都）美術館「えき」KYOTO：「吉村芳生 超絶技巧を超えて」展。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/17/210142">過去のフイルムカメラの写真を、WindowsアプリFotoSketcherで鮮やかでおしゃれな絵画調に加工する。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/17/150028">オリンパス Tough TG-5で、身近なものを顕微鏡モードで撮ってみた。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 旅行 マップ付 里山・田園・田舎</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/16/134533">和歌山県）有田みかん海道。みかん畑のみかんの花。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 建築物・構造物 鉄道・乗り物 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/16/131100">和歌山県）友ヶ島（砲台跡、弾薬庫跡）ハイキング。加太さかな線「めでたいでんしゃ」。</a></td>
+</tr>
+<tr>
+<td class="category">サイエンス・自然・宇宙 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/12/111411">ハッブル宇宙望遠鏡の画像を合成した画像に写っている無数（？）の銀河が凄い。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/09/225302">兵庫県丹波市）白毫寺の九尺藤。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 神戸 マップ付 花・植物 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/08/180023">六甲山系）東おたふく山→雨ヶ峠→五助ダム(堰堤)→住吉台。新緑2019。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/07/170817">神戸元町）懐かしのKodak EasyShare V570でスナップ写真。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 花・植物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/05/223226">奈良県橿原市）橿原神宮。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 古い町並み マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/05/222411">奈良県橿原市）八木町→今井町。江戸時代の雰囲気を残す町並み。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/04/205246">大阪心斎橋）LUMIX DC-LX100M2＋NDフィルターで低速シャッターで人物ぼかし。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/04/163438">大阪）蒲生四丁目周辺を散策＆スナップ写真。with LUMIX DC-LX100M2。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 京都 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/02/221209">京都）乙訓寺→光明寺→長法寺→西山公園体育館→竹林→長岡天満宮（キリシマツツジ）。</a></td>
+</tr>
+<tr>
+<td class="category">鉄道・乗り物 旅行 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/05/01/113241">ヨーロッパ鉄道時刻表と鉄道地図。ヨーロッパ鉄道旅行の思い出。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/28/152656">ならまち散歩＆スナップ写真。with LUMIX DC-LX100M2。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 写真・カメラ 動物・鳥・昆虫 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/28/150855">奈良公園飛火野散策。野生の藤が迫力満点。with LUMIX DC-LX100M2。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/27/153649">デジカメ「パナソニック LUMIX DC-LX100M2」、神戸北野＆元町で試し撮り。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/27/144707">デジカメ「パナソニック LUMIX DC-LX100M2」レビュー。RX100M6とボケ比較。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/27/080031">Google翻訳より精度が高いと評判の「みらい翻訳」のお試し翻訳を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/25/170040">大阪梅田）SONY DSC-RX100M6＋NDフィルターで低速シャッタースナップ写真。人物ぼかし。</a></td>
+</tr>
+<tr>
+<td class="category">棚田 ハイキング マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/25/094758">過去ログ：千葉県「大山千枚田」</a></td>
+</tr>
+<tr>
+<td class="category">天気予報 ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/24/153201">全国の任意の都道府県の「週間天気予報」を一覧で見る。</a></td>
+</tr>
+<tr>
+<td class="category">棚田 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/24/143106">「日本の棚田百選マップ」をGoogleマップのマイプレイスで作成。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/21/211435">大阪）花博記念公園鶴見緑地。新緑、八重桜、ネモフィラ。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 桜 六甲山・摩耶山 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/20/224539">神戸森林植物園。「新緑つつじ・しゃくなげ散策」スタート。残り桜（？）もきれい。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ 音楽</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/19/113943">Android）Operaブラウザで、YouTube音楽を画面オフ（バックグラウンド）で再生。ループ再生も簡単。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ 音楽</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/19/104721">YouTube音楽などを聞くために、DAP(digital audio player)として「HUAWEI MediaPad T5」を購入。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/17/212253">大阪）茶屋町、中崎町を散歩＆スナップ写真。カメラは、LUMIX GM1＋42.5mm/F1.7。（２／２）</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/17/211552">大阪）茶屋町、中崎町を散歩＆スナップ写真。カメラは、LUMIX GM1＋42.5mm/F1.7。（１／２）</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング 京都 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/16/093006">京都）仁和寺の御室桜。見頃。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング 京都 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/16/090256">京都）原谷苑の咲き乱れる花々。見頃。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 桜 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/14/144603">岐阜県下呂市）下呂温泉。下呂温泉合掌村。河川敷の桜。</a></td>
+</tr>
+<tr>
+<td class="category">桜 花・植物 旅行 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/14/140521">岐阜県下呂市）飛騨はぎわら桜めぐり：森山神社、岩太郎、永養寺のしだれ桜 ...</a></td>
+</tr>
+<tr>
+<td class="category">旅行 桜 花・植物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/14/121226">岐阜県下呂市）苗代桜</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 桜 ハイキング マップ付 建築物・構造物 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/10/151445">香川）こんぴらさん（金毘羅さん、金刀比羅宮）。琴電琴平駅。</a></td>
+</tr>
+<tr>
+<td class="category">桜 花・植物 旅行 ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/10/142903">香川）紫雲出山（しうでやま）の桜</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/07/153756">大阪）南船場、堀江を散歩＆スナップ写真。カメラは、LUMIX GM1＋42.5mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">桜 花・植物 ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/06/222841">奈良）平城宮跡の桜。佐保川の桜並木。大仏鉄道記念公園の枝垂桜。</a></td>
+</tr>
+<tr>
+<td class="category">桜 花・植物 ウォーキング・散策 神戸 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/05/152323">神戸）摩耶ケーブル下の桜トンネル、王子公園、王子動物園周辺の桜。満開間近。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/04/195947">兵庫県）西宮水道局越水浄水場「さくらの通り抜け」。夙川沿いの桜。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング 里山・田園・田舎 マップ付 花・植物 桜 棚田</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/03/181344">佐賀県）九州オルレ「嬉野コース」納戸料の百年桜→嬉野温泉。嬉野温泉の桜満開。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 桜 マップ付 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/03/181200">佐賀県）納戸料の百年桜、満開。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング 里山・田園・田舎 マップ付 花・植物 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/03/180845">佐賀県）九州オルレ「唐津コース」名護屋城跡から波戸岬まで。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 桜 マップ付 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/04/03/180826">佐賀県）名護屋城跡の桜</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 マップ付 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/27/171221">神戸）JR塩屋駅→旗振山→鉄拐山→高倉山</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/26/173122">六甲山系）六甲山、摩耶山、東おたふく山ブログ記事まとめ</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/26/141620">阪神電車尼崎駅周辺散歩。with LUMIX GM1＋42.5mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">神戸 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/26/083453">神戸元町が舞台、鳥居みゆき主演の連続ドラマ「元町ロックンロールスウィンドル」（サンテレビ）</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 コンピュータ・Windows・スマホ はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/25/113619">はてなブログを記事一覧に簡単に切り替える方法。ブックマークレットを使う。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/25/103935">はてなブログを記事一覧で見る方法。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/24/171553">兵庫県西宮市）北山緑化植物園</a></td>
+</tr>
+<tr>
+<td class="category">イベント 食べる 花・植物 ウォーキング・散策 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/23/141434">神戸）東洋ナッツ「アーモンドフェスティバル」2019</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/22/195533">RX100M6用フィルターアダプターとNDフィルターを購入。シャッタースピード1/8秒、1/4秒で人物をぼかす。</a></td>
+</tr>
+<tr>
+<td class="category">桜 花・植物 写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/22/111636">過去の桜の写真を、Windowsアプリ「ImageMagick」のヒストグラム平坦化で明るい感じにしてみた。</a></td>
+</tr>
+<tr>
+<td class="category">桜 地図・マップ ホームページ、Web作成 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/22/093605">「日本のさくら名所100選マップ」をGoogleマップのマイプレイスで作成。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/21/165144">WindowsアプリGIMPで、写真の色味を変えてみた。（カラーバランス調整）</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/20/170717">Google Maps API）chart.apis.google.comが使えなくなったので、マーカーラベルにMarkerWithLabelを使った。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/18/220106">京都）四条烏丸、四条河原町、祇園界隈でスナップ写真。カメラは、LUMIX GM1＋42.5mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">建築物・構造物 イベント 写真・カメラ マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/16/153516">神戸税関 &amp; KIITO。LUMIX GM1＋42.5mm/F1.7 / OLYMPUS Tough TG-5＋ロワジャパン0.7倍ワイコン。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/15/163152">大阪本町から難波まで散歩 with LUMIX GM1＋42.5mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">桜 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/14/170129">ブログの桜記事の行先地点マップをGoogleマップのマイプレイスで作成。</a></td>
+</tr>
+<tr>
+<td class="category">梅 花・植物 旅行 マップ付 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/14/150849">三重）いなべ市梅林公園。三岐鉄道北勢線。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 建築物・構造物 マップ付 ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/14/150826">三重）四日市コンビナート。工場夜景でなく昼景。</a></td>
+</tr>
+<tr>
+<td class="category">梅 花・植物 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/14/150815">三重）鈴鹿の森庭園「しだれ梅まつり」</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/08/225539">オリンパス Tough TG-5用の宙玉レンズ「GIZMON x ZENJIX soratama 55 for TG」を購入。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/08/221334">京都散歩（同志社大学→寺町通→四条河原町） with LUMIX GM1＋42.5mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/07/095725">徳島県鳴門市）陶板複製画の美術館「大塚国際美術館」</a></td>
+</tr>
+<tr>
+<td class="category">旅行 海 サイエンス・自然・宇宙</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/07/092231">淡路島）鳴門海峡うずしおクルーズ船</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 梅 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/07/091030">淡路島）樹齢70年「八木のしだれ梅」</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/04/133453">WindowsアプリGIMPを使って、写真2枚を重ねたイメージの作成を試した。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 梅 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/03/082846">京都銅版画協会展。京都御苑梅林。下御霊神社の梅。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/01/182734">無料レンタルサーバーが、相次いで「3か月ごとの契約更新手続きを義務化」</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/03/01/135739">神戸元町から三宮まで山手側を散歩 with LUMIX GM1＋42.5mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/28/132437">LUMIX DMC-GM1の代替となる小型のミラーレス一眼が欲しい。OLYMPUS OM-D E-M1Xとサイズを比較してみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/28/112119">CSSのブレンドモード&quot;background-blend-mode&quot;を使って、写真を2枚重ねたイメージの作成を試した。</a></td>
+</tr>
+<tr>
+<td class="category">古い町並み 食べる ウォーキング・散策 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/27/114733">金沢）近江町市場→主計町茶屋街→金澤表参道→金沢駅。蟹づくし会席。</a></td>
+</tr>
+<tr>
+<td class="category">古い町並み ウォーキング・散策 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/27/114716">能登）七尾の町散策。能登千里浜散歩。</a></td>
+</tr>
+<tr>
+<td class="category">鉄道・乗り物 食べる 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/27/114659">能登）観光列車「花嫁のれん」。のと鉄道。能登牡蠣。</a></td>
+</tr>
+<tr>
+<td class="category">鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/26/224604">JR大阪駅南口改札内「まんぷく」ポスター。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/23/111055">影付き枠＋ビネット効果付き写真サムネイルアルバムの大阪版、京都版作成。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/22/160841">レンズ「LUMIX 42.5mm/F1.7」購入。大阪梅田でスナップ写真。レビュー。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/20/160336">大阪）京橋駅周辺から桜ノ宮駅まで散歩 with LUMIX GM1＋15mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/19/135849">CSSのブレンドモード&quot;background-blend-mode&quot;を使うと写真にカラーフィルタをかけたような色の加工ができる。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 食べる</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/18/230300">岡山県）日生（ひなせ）へ牡蠣を食べに行く。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/17/182430">影付き枠＋ビネット効果付き写真サムネイルアルバムのポップアップ拡大画像にビネット効果。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/17/180201">影付き枠＋ビネット効果付き写真サムネイルアルバムにポップアップ拡大画像を追加。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/17/104451">備忘録：スマホでページ全体を縮小表示したい時は、viewportのinitial-scaleで縮小値を指定する。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/16/224057">Google 日本語WEBフォント「さわらび明朝」を使ってみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/16/223049">CSS）影付き枠＋ビネット効果を使った写真のサムネイルアルバムをつくってみた。</a></td>
+</tr>
+<tr>
+<td class="category">梅 花・植物 ウォーキング・散策 マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/16/172208">神戸）須磨離宮公園、須磨寺、綱敷天満宮。梅、七分咲き（？）。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/15/155918">CSS）写真に影付きのシンプルな枠＋ビネット効果</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/15/150757">CSSで写真に影付きのシンプルな枠(フレーム)を付ける。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/15/135029"> CSSで写真を鉛筆画、色鉛筆画、水彩画風にエフェクト</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/15/091120">CSS「box-shadow」で、写真にビネット効果をつけてみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/14/152603">CSS Filterを使えば、簡単に色調加工ができる。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/14/134002">神戸元町散歩 with LUMIX GM1＋15mm/F1.7。 </a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/13/214410">京都精華大学展2019</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/12/141537">はてなブログ）スマホ等でページ横からはみ出たテーブルを横スクロールできるようにする最も（？）簡単な方法。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/11/234152">はてなブログのテーマをレスポンシブ対応のMinimalismに変更。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/11/162511">2018年度 京都市立芸術大学 作品展</a></td>
+</tr>
+<tr>
+<td class="category">イベント 食べる</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/10/170925">兵庫県）相生かきまつり</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/09/210120">2018年度 京都造形芸術大学 卒業展</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/08/224853">Windowsアプリ「ImageMagick」で写真のヒストグラム平坦化（equalize）を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">古い町並み 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/07/171603">パナソニックミュージアム、大阪くらしの今昔館</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/06/220215">Androidアプリ「万華鏡 カメラ アプリ 無料」を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/05/222541">兵庫県）播磨アルプス・高御位山</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/04/161306">備忘録：Windowsパソコンに入れているアプリケーションソフト</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ウォーキング・散策 古い町並み マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/03/155225">沖縄）那覇まちなか（壺屋やちむん通り...）散策</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 桜 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/03/153310">沖縄）名護城公園さくらの園から名護十字路</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 ハイキング 海 古い町並み マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/03/152031">沖縄）エメラルドビーチと備瀬のフクギ並木道</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 ハイキング 古い町並み 海 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/03/150829">沖縄）今帰仁村今泊</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 桜 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/03/145705">沖縄）今帰仁城跡の寒緋桜（カンヒザクラ）</a></td>
+</tr>
+<tr>
+<td class="category">旅行 花・植物 桜 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/02/03/144904">沖縄）八重岳の寒緋桜（カンヒザクラ）</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/29/135013">WindowsアプリGIMPで、写真のビネット効果（周辺減光補正）を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/28/132051">写真から輪郭抽出した画像にAdobe Photoshop Sketchの水彩ブラシで色を付けてみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/27/180942">写真から輪郭抽出。アプリ「Adobe Capture CC」「FotoSketcher」「GIMP」...を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/26/135259">モノクロ人物絵画調写真を銅版画用紙で印刷したら、いい感じになった。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/26/112359">アワガミインクジェットペーパー（AIJP）で水彩画を印刷してみる。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/25/155657">iPad miniとお絵描きアプリ「Adobe Photoshop Sketch」と百均のディスクタイプタッチペンで水彩画を描いてみる。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/23/102010">モノクロ人物写真（オードリーヘプバーン）を「FotoSketcher」で絵画調に。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/22/152335">水彩画をインクジェットプリンターで印刷してみる。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/21/153324"> 「FotoSketcher」の水彩画のパラメーターの値を変えて試してみた（続き）。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/21/141216">「FotoSketcher」の水彩画のパラメーターの値を変えて試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 六甲山・摩耶山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/17/134000">国土交通省近畿地方整備局の六甲山系電子植生図鑑が良く出来ている。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/15/104432">Google Maps API使用のため、Google Cloud Platformを試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/08/172527">奈良県）二上山（雄岳、雌岳）、當麻寺。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/06/100957">京都）八坂神社、知恩院、平安神宮、初詣。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 建築物・構造物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/04/193432">神戸）鎌倉峡、百丈岩、千刈ダム。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/03/172848">神戸）東灘区神社巡り</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2019/01/01/214418">神戸）高取神社→荒熊神社→長田神社</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 六甲山・摩耶山 マップ付 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/30/173418">神戸）渦森台→油コブシ→高羽道→六甲ケーブル下。葉痕探し（？）。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ウォーキング・散策 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/28/103912">年内最終開園日の京都府立植物園</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/21/155050">モノクロモード比較：RX100M6、LUMIX GM1＋15mm/F1.7。神戸元町、三宮にて。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/21/143023">パナソニックのデジカメ写真のEXIFから、フォトスタイル、クリエイティブコントロール情報を抜き出して、画像ファイル名にEXIF情報を付け足す。（ExifTool/JScript）</a></td>
+</tr>
+<tr>
+<td class="category">建築物・構造物 鉄道・乗り物 写真・カメラ 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/19/170519">ワンダーランド（？）京都駅。Photos by RX100M6、TG-5＋ワイコン。</a></td>
+</tr>
+<tr>
+<td class="category">桜 花・植物 地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/18/165740">日本全国「桜名木マップ」をGoogleマップのマイプレイスで作成。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/18/161535">「日本三百名山マップ」をGoogleマップのマイプレイスで作成。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/17/223313">神戸六甲山系）トゥエンティクロス土砂崩れ被害状況</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/16/093947">大阪府堺市）まちなか散策</a></td>
+</tr>
+<tr>
+<td class="category">古い町並み ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/12/220712">大阪府富田林）寺内町 まちなか散策</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/09/162009">神戸）渦森台→住吉川→摂津本山駅</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 紅葉 花・植物 大学・学食</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/06/102041">大阪市立大学植物園。大阪府民の森ほしだ園地。紅葉終盤。</a></td>
+</tr>
+<tr>
+<td class="category">古い町並み ウォーキング・散策 マップ付 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/03/090708">滋賀県）長浜散策。長浜鉄道スクエア。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/12/01/145527">自分で撮った写真で卓上型カレンダーをつくってみた。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/29/160702">自分で撮った写真で2019年カレンダーをつくってみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/29/093518">ソニーのデジカメ写真のEXIFから、クリエイティブスタイル、ピクチャーエフェクト情報を抜き出して、画像ファイル名にEXIF情報を付け足す。（ExifTool/JScript）</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/29/081842">Google Calendar API v3の祝日表示が2019年の即位の礼を含む10連休に対応</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/28/100955">セピアカラーの写真の色相を変えてみた。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/27/151748">大阪）梅田→四ツ橋筋→難波→なんばパークス with LUMIX GM1＋15mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/26/095454">DSC-RX100M6は、背景の雰囲気を残した自然できれいなボケが得られる。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/25/213654">デジカメ写真の色相を変えると、アートっぽくなる。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング イベント 花・植物 古い町並み 紅葉 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/25/211202">大阪府河内長野）高野街道。奥河内くろまろの郷。大阪府立花の文化園。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/24/101431">露出アンダー、露出オーバー写真のガンマ補正を実験</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/23/123805">DSC-RX100M6 クリエイティブスタイル 画像比較</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 紅葉 里山・田園・田舎 マップ付 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/22/094406">滋賀県）湖東三山：百済寺、金剛輪寺、西明寺。紅葉見頃。近江鉄道。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/19/153002">AIを使って写真の解像度を6倍にできるソフト「Topaz A.I. Gigapixel」を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/19/085743">京都府京丹波町）丹波ワイン。農園・ワイナリー見学。</a></td>
+</tr>
+<tr>
+<td class="category">イベント 酒・ワイン・ビール 古い町並み マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/18/220417">大阪府柏原市）カタシモワイン祭り2018</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 建築物・構造物 古い町並み マップ付 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/18/214640">奈良）唐招提寺。薬師寺。奈良県立美術館「ブラティスラヴァ世界絵本原画展」。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 里山・田園・田舎 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/15/214549">和歌山県かつらぎ町）四郷「串柿の里」</a></td>
+</tr>
+<tr>
+<td class="category">イベント ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/11/171257">兵庫楽農生活センター「秋の感謝祭」→雌岡山</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 紅葉 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/10/165945">神戸森林植物園。紅葉シーズン。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 紅葉 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/09/163855">奈良県）吉野山ハイキング。紅葉。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 建築物・構造物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/07/154605">兵庫県尼崎市）出屋敷→北堀運河→であい橋→武庫川。工場地帯。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/06/154738">デジカメ：センサーサイズが大きければ、画質は上がるのか？</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 建築物・構造物 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/06/111315">京都府南丹市）日吉ダム</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 紅葉 マップ付 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/06/110343">京都府南丹市）芦生の森トレッキングツアー「上谷・杉尾峠コース」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 里山・田園・田舎 マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/06/105409">京都府南丹市）美山かやぶきの里→美山町自然文化村</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/11/02/172209">2018年、関西文化の日。横尾忠則現代美術館、入館無料。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 里山・田園・田舎 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/31/162841">初秋（？）の神戸「あいな里山公園」</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/30/095625">京都）かもがわカフェ→書店「誠光社」→寺町通</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/27/163428">デジカメ「ソニー DSC-RX100M6」、大阪梅田で試し撮り。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 美術・アート マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/25/201448">兵庫県三田市）新宮晋「風のミュージアム」</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/24/212911">デジカメ「ソニー サイバーショット DSC-RX100M6」レビュー。DSC-HX90Vと比較。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/24/162314">神戸森林植物園、森林もみじ散策シーズン始まり。</a></td>
+</tr>
+<tr>
+<td class="category">古い町並み ウォーキング・散策 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/22/134050">滋賀県、琵琶湖北東）醒井宿、近江長岡伊吹せんろみち。</a></td>
+</tr>
+<tr>
+<td class="category">イベント ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/20/211404">兵庫県丹波篠山市）丹波焼陶器まつり</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/15/124001">写真：自転車のある風景。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ウォーキング・散策 マップ付 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/14/165105">山口県）防府市。防府天満宮、周防国分寺、山頭火ふるさと館。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/14/165052">山口県）秋芳洞</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/14/165039">山口県）秋吉台</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/14/165026">山口県）長門湯本温泉</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ウォーキング・散策 マップ付 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/14/165013">山口県）仙崎、金子みすゞ記念館。JR山陰本線仙崎駅。</a></td>
+</tr>
+<tr>
+<td class="category">イベント ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/08/161855">兵庫県）丹波篠山味まつりに黒大豆枝豆を買いに行く。2018年。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/05/145542">コンデジ画質比較 by Imaging Resource, TwentyTwenty</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/04/201229">八幡平）秋田県 新玉川温泉→玉川温泉</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 紅葉 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/04/201108">八幡平）岩手県 八幡平頂上。八幡沼、草黄葉。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 紅葉 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/04/201028">八幡平）秋田県 後生掛温泉→蒸ノ湯（ふけのゆ）温泉。紅葉。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 紅葉 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/04/200935">八幡平）秋田県 後生掛自然研究路。紺屋地獄、大泥火山、大湯沼。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/04/200833">八幡平）岩手県 八幡平頂上。途中断念。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 紅葉 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/10/04/200629">八幡平）秋田県 後生掛温泉→大沼</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/27/134504">画像比較ツール「TwentyTwenty」を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 建築物・構造物 マップ付 写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/26/141437">神戸 六甲大橋→六甲アイランド。OLYMPUS Tough TG-5＋FCON-T01。</a></td>
+</tr>
+<tr>
+<td class="category">棚田 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/25/095541">滋賀県）畑の棚田</a></td>
+</tr>
+<tr>
+<td class="category">棚田 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/25/095536">滋賀県）鵜川の棚田、白鬚神社、乙女ヶ池。</a></td>
+</tr>
+<tr>
+<td class="category">サイエンス・自然・宇宙 コンピュータ・Windows・スマホ 天気予報</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/24/203132">Windy.comによれば、9月29日～10月1日にかけて台風24号が日本直撃（？）。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 古い町並み ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/23/150401">大分県）杵築（きつき）。武家屋敷、土塀、石垣。</a></td>
+</tr>
+<tr>
+<td class="category">里山・田園・田舎 旅行 マップ付 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/23/150351">大分県）田染荘（たしぶのしょう）、国東半島峯道ロングトレイル。</a></td>
+</tr>
+<tr>
+<td class="category">古い町並み ウォーキング・散策 旅行 鉄道・乗り物 マップ付 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/23/150345">大分県）豊後高田「昭和の町」。JR九州特急883系ソニック。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/19/094944">HUAWEIスマホ（P10 Plus他）超急速充電対応USBケーブル</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策 建築物・構造物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/18/143246">神戸）阪神電車新在家駅→西灘駅。OLYMPUS Tough TG-5＋ロワジャパン0.7倍ワイコン。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/17/162042">兵庫県）三木市まち中散策。染め型紙は一見の価値あり。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 古い町並み ウォーキング・散策 イベント マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/16/160203">兵庫県）丹波篠山・まちなみアートフェスティバル 2018</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/13/155542">Googleマップの詳細かつ広い範囲の地図を印刷する方法。</a></td>
+</tr>
+<tr>
+<td class="category">動物・鳥・昆虫</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/10/094034">これは、カタツムリなのかナメクジなのか？それとも、それ以外の何かなのか？</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/06/152055">スマホ用0.45倍広角レンズ「AUKEY PL-WD06」を購入して試してみた。超広角レンズ比較。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/03/154312">神戸元町、三宮界隈散策 with LUMIX GM1＋15mm/F1.7。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/09/02/160600">大阪「空堀商店街」周辺散策。カメラはSONY DSC-HX90V。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/29/163602">風景万華鏡をスマホ（HUAWEI P10 Plus）にくっつけて撮影。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/29/105523">大阪西梅田界隈。SONY DSC-HX90Vで撮影して、Image Composite Editorで超広角合成写真。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/29/105459">大阪西梅田界隈。OLYMPUS Tough TG-5＋ロワジャパン0.7倍ワイコンでモノクロ写真。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/27/142854">オリンパス Tough TG-5用の宙玉レンズを作ってみた。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/24/162000">神戸市立小磯記念美術館「浜口陽三と南桂子展」。小磯良平の銅版画は一見の価値あり。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/19/131032">「Image Composite Editor」で作る超広角写真 at Kobe。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/17/163622">「Image Composite Editor」を使って、ワイコンなしで超広角写真を作る。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/16/110731">任意のサイトの写真で宙玉(そらたま)写真が作れるサイトを作ってみた。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/15/154253">JavaScriptで宙玉(そらたま)写真を作れる「SORA-TAMA Transform (Fish-Eye)」を試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/14/174313">OLYMPUS TG-5＋ロワジャパン0.7倍ワイドコンバージョンレンズ試し撮り</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/13/150442">LUMIX GM1＋15mm/F1.7と、OLYMPUS TG-5に、ロワジャパン0.7倍ワイドコンバージョンレンズを付けてみた。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/11/123858">水滴や波紋を表現するJavaScriptスクリプトを試してみた。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/09/125122">Webサイト作成：無料レンタルサーバー</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング 鉄道・乗り物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/08/154230">夏の思い出：2012年。ノルウェー。ハダンゲルフィヨルド。フロム鉄道。ボルグンド・スターヴ教会。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/07/150059">夏の思い出：2008年。岩手県、八幡平。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/07/135859">夏の思い出：2016年。北海道）積丹半島。ウニ。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/07/133929">夏の思い出：2011年。北海道）夏涼しい知床、ウトロ、羅臼。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/07/102112">夏の思い出：2014年。北海道）夏涼しい霧多布岬、霧多布湿原。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/07/092559">夏の思い出：2005年。長野県）木曽駒ヶ岳、千畳敷カール。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/06/092609">Yahoo! JavaScriptマップAPIで作成した地図サイトをGitHubのWebサーバーにコピー。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/05/232643">HTTPSが無料で使えるWebサーバーとしてGitHubを使う。</a></td>
+</tr>
+<tr>
+<td class="category">イベント 酒・ワイン・ビール マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/05/104545">2018年「みなとこうべ海上花火大会」と「カンパイKOBE」</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/03/214246">無料版はてなブログでスマホのCSSをJavaScriptを使ってカスタマイズする方法。成功せず。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/03/142552">岩手山）犬倉分岐→犬倉山。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/08/03/140346">岩手山）犬倉分岐→大松倉山→三ツ石山荘。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/29/154825">備忘録：登山関連情報おすすめサイト</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/26/162501">四国徳島県）剣山、次郎笈峠。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング 美術・アート マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/26/160901">徳島県三好市東祖谷名頃集落「天空の村・かかしの里」</a></td>
+</tr>
+<tr>
+<td class="category">サイエンス・自然・宇宙 天気予報 山歩き・登山 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/21/102251">山の天気予報サイト「てんきとくらす」「tenki.jp」</a></td>
+</tr>
+<tr>
+<td class="category">サイエンス・自然・宇宙 天気予報</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/21/091957">14日間(2週間)天気予報・1時間ごとのピンポイント天気予報</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 里山・田園・田舎 マップ付 旅行 食べる</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/19/140124">秋田県にかほ市「象潟 九十九島めぐり」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 旅行 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/19/140008">秋田県、山形県）鳥海山、象潟口(鉾立)ルート。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 旅行 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/19/135830">山形県遊佐町「丸池様、牛渡川梅花藻」</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/13/144317">シンプルなHTMLカレンダー。Google Calendar API v3で祝日表示。PHPコードサンプル。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/08/153644">備忘録：JavaScript、jQuery スニペット</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/08/001418">備忘録：河川の氾濫、洪水等の危険度分布マップ、土砂災害、洪水、津波ハザードマップ</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/07/144138">HTML(TABLE)クリッカブルマップ「日本地図」を作成。スマホ対応。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/07/05/102452">最近、コンデジの新製品がほとんど出ない。毎年の新製品の推移を調べてみた。</a></td>
+</tr>
+<tr>
+<td class="category">サイエンス・自然・宇宙 地図・マップ ホームページ、Web作成 コンピュータ・Windows・スマホ 天気予報</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/29/160146">現在地のYahoo天気予報「雨雲地図」とWindy.com「雨、雪予測地図」を1画面に。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ サイエンス・自然・宇宙 ホームページ、Web作成 コンピュータ・Windows・スマホ 天気予報</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/27/152713">スマホ用検索ポータル「2nd Sch」をPC用にカスタマイズ。「Windy.com」3画面付き表示等。現時点、12時間後、24時間後の天気（雨・雪・風）図を同時に並べて確認できる。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ サイエンス・自然・宇宙 ホームページ、Web作成 コンピュータ・Windows・スマホ 天気予報</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/27/103332">スマホ用検索ポータル「2nd Sch」を作成。Google Suggest API、Yahoo雨雲地図、Windy.com付き。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/22/140549">(YOLP) Yahoo! JavaScriptマップAPIで複数地点マーカー地図を作成。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/20/135031">(YOLP) Yahoo! JavaScriptマップAPIで地図サイトを作成。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/18/160311">京都府）舞鶴自然文化園「あじさい」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 サイクリング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/18/112135">滋賀県もりやま芦刈園「あじさい」。草津市立水生植物公園みずの森「スイレン」。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/16/211055">「Google Maps API」がAPIキーなしでは使えなくなった。地図がグレーアウト表示になる。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/12/110116">備忘録：デジカメ仕様＆画質比較サイト、デジカメ写真サンプルサイト</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/10/220454">Flickrで、フォトアルバムを作成。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 花・植物 動物・鳥・昆虫 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/09/230623">京都宝ヶ池公園→深泥池→京都府立植物園</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/06/150809">GPSロガー：HUAWEIスマホ＋Android 8.0で、スリープ時にバックグラウンドアプリが停止する問題の対策</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/06/141316">和歌山県）熊野古道大日越。湯の峰温泉から熊野本宮大社まで。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/06/135753">和歌山県）新宮市、熊野速玉大社、神倉神社、新宮城跡。熊野本宮大社。</a></td>
+</tr>
+<tr>
+<td class="category">鉄道・乗り物 ハイキング マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/06/123155">奈良県）日本一長い路線バスで日本一大きな村、十津川村へ。熊野古道小辺路果無集落。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/06/02/144541">兵庫県立甲山森林公園</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/30/162821">Windows画像ビューアーフリーソフト「FastStone Image Viewer」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 里山・田園・田舎 マップ付 旅行 棚田</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/29/172815">兵庫県）木の殿堂→兎和野の大カツラ→福岡ハチ北口バス停</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/29/170500">兵庫県）春の「たじま高原植物園」。和知の大カツラ。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 動物・鳥・昆虫 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/29/164852">兵庫県香美町「ハチ北高原大沼湿原」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 棚田 マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/29/163032">兵庫県香美町「西ヶ岡の棚田」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 棚田 マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/29/160200">兵庫県香美町「うへ山の棚田」</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/25/165240">京都四条河原町、先斗町、木屋町通り周辺散策。レンズLEICA 15mm/F1.7試し撮り。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/24/202356">レンズ「LEICA 15mm/F1.7」購入。大阪梅田、中崎町で試し撮り。レビュー。</a></td>
+</tr>
+<tr>
+<td class="category">建築物・構造物 ハイキング マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/22/230046">岐阜県中津川市「苗木城跡」</a></td>
+</tr>
+<tr>
+<td class="category">棚田 里山・田園・田舎 ハイキング マップ付 動物・鳥・昆虫 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/22/224236">岐阜県恵那市「坂折棚田」。口を開けるツバメの雛。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 里山・田園・田舎 棚田 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/20/175527">滋賀県「仰木の棚田」</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/19/151005">大阪北新地、福島周辺散策。with LUMIX GM1＋20mm/F1.7 II</a></td>
+</tr>
+<tr>
+<td class="category">鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/18/152639">JR西日本「昼間特割きっぷ」2018年9月30日で発売終了。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/17/150805">デジカメのセンサーサイズとボケの関係が画像で確認できるサイト「DOF simulator」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 マップ付 花・植物 鉄道・乗り物 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/14/171431">六甲ケーブル→六甲ケーブル山上駅→記念碑台→シュラインロード→神戸電鉄有馬口駅。タニウツギ。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/13/151335">備忘録：Windows 10で前回使用していたアプリケーションが勝手に立ち上がる問題の解除方法</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 イベント 大学・学食</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/13/140646">大阪大学「植物探検隊＠春の待兼山を訪ねて」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 動物・鳥・昆虫 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/11/155000">北海道）札幌「円山公園」「北海道神宮」「円山原始林」「大通公園ライラック」</a></td>
+</tr>
+<tr>
+<td class="category">建築物・構造物 花・植物 桜 旅行 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/11/153053">札幌「モエレ沼公園」「中島公園」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/11/152246">北海道）ひだか町「静内二十間道路桜並木」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 動物・鳥・昆虫 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/11/140859">北海道）支笏湖。野鳥の森「アカゲラ」「クロツグミ」。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/05/163731">写真を正方形にトリミングする方法。画像処理しないでCSSのみでトリミング。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/04/133518">デジカメ（HX90V、TG-5、GM1＋30mm、P10 Plus）スナップ写真 ブログ記事一覧作成</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/02/143139">新潟の有名な銘柄の日本酒（〆張鶴、久保田、八海山、越乃寒梅）が関西では定価で売られていない。定価を調べてみた。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/02/134421">1型デジカメG7X MarkII、RX100M5、DMC-LX9 仕様比較</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/02/103401">写真バックアップで容量無制限・無圧縮の「Amazonプライムフォト」を使ってみる。</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 サイエンス・自然・宇宙</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/02/084524">火山噴火、爆発というニュースが多い。M8級巨大地震が近いのかも。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/02/074059">写真バックアップを「Googleフォトバックアップ」からGoogle「バックアップと同期」に移行。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎 棚田 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/05/01/155358">里山ハイキング。河内磐船駅→同志社前駅（大阪→奈良→京都）</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング 鉄道・乗り物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/30/104027">滋賀県）鎌掛谷ホンシャクナゲ群落。藤の寺。近江鉄道。</a></td>
+</tr>
+<tr>
+<td class="category">鉄道・乗り物 里山・田園・田舎 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/28/212325">奈良県）大仏鉄道遺構めぐり。里山ハイキング。JR加茂駅→JR奈良駅。</a></td>
+</tr>
+<tr>
+<td class="category">六甲山・摩耶山 ハイキング マップ付 大学・学食 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/26/162637">神戸）渦森台→六甲山高羽道→六甲ケーブル下→神戸大学→都賀川→阪神大石</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 写真・カメラ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/24/222743">写真を鉛筆画、ペン画、版画、水彩画、油彩画のような絵画調に変換するWindowsアプリ「FotoSketcher」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 マップ付 京都 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/22/225233">京都大文字山ハイキング。日向大神宮シャガ。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 マップ付 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/19/163602">六甲山系）東おたふく山→雨ヶ峠→五助ダム(堰堤)→住吉台。新緑2018。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/18/200647">神戸須磨離宮公園。4月。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/18/172957">神戸元町駅交番横に咲く黄色の花、ブラジル国花「イペ」。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/17/085222">奈良県）山の辺の道（柳本から天理まで）</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/14/173637">兵庫県宝塚市中山寺の白い藤。園芸店の花。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング 写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/13/152633">神戸森林植物園。新緑、コバノミツバツツジ。＋モノクロ写真</a></td>
+</tr>
+<tr>
+<td class="category">建築物・構造物 ウォーキング・散策 マップ付 酒・ワイン・ビール</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/11/174259">滋賀県）近江今津ヴォーリズ通り。琵琶の長寿。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/11/173559">滋賀県）近江中庄桜めぐり</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/11/161721">滋賀県マキノ「メタセコイア並木」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/11/155733">滋賀県）琵琶湖畔「海津大崎の桜」</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/08/171309">備忘録：会員登録不要の無料ファイル転送サービス</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/08/154825">夙川沿い「西宮さくら祭」。西宮水道局「さくらの通り抜け」。</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/07/150825">神戸）白鶴酒造2018年春「酒蔵開放」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/06/125326">三重県）養老鉄道。養老天命反転地。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/06/124423">日本三大桜の一つ、岐阜「根尾谷淡墨桜」。樽見鉄道。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 マップ付 ウォーキング・散策 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/02/220513">京都）哲学の道→野村碧雲荘横のしだれ桜→蹴上インクラインの桜</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/02/214932">半木の道のしだれ桜。京都府立植物園の桜。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/04/01/164932">兵庫県伊丹市）武庫川河川敷緑地。桜満開。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/31/163804">懐かしのカメラ。デュアルレンズカメラ「Kodak EasyShare V570」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング マップ付 鉄道・乗り物 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/30/175612">京都淀川河川公園背割堤地区の桜。満開。男山ケーブル。石清水八幡宮。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/29/174415">早春の神戸森林植物園。コブシ、ハクモクレン満開。</a></td>
+</tr>
+<tr>
+<td class="category">六甲山・摩耶山 ハイキング 鉄道・乗り物 桜 マップ付 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/29/172958">摩耶ケーブル下の桜トンネル満開。まやビューライン→摩耶山掬星台→桜谷道→徳川道→神戸森林植物園。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/28/205942">奈良大和郡山。金魚と郡山城跡の桜。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/28/202544">奈良大和高田千本桜。満開。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/28/031234">HUAWEI P20 Pro 発表。トリプルレンズカメラ。→ファーウェイにデジカメ専用機を作ってもらいたい。</a></td>
+</tr>
+<tr>
+<td class="category">建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/27/091310">滋賀県）近江八幡のヴォーリズ建築群</a></td>
+</tr>
+<tr>
+<td class="category">イベント 建築物・構造物 大学・学食 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/26/222058">兵庫県）まちたびにしのみや「神戸女学院大学を知る」。ヴォーリズ建築。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 建築物・構造物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/23/153432">JR神戸駅、神戸ハーバーランド周辺をモノクロ写真（＋カラー写真）。DSC-HX90Vレビュー。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/22/093525">このブログ「晴歩雨描」をHTTPS化。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/214715">「オーストリア・アルプスのお勧め。2009年 (3/3)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/213747">「オーストリア・アルプスのお勧め。2009年 (2/3)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/213052">「オーストリア・アルプスのお勧め。2009年 (1/3)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/161941">オーストリア・アルプスのお勧め。2006年 (5/5)。インスブルック。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/161505">オーストリア・アルプスのお勧め。2006年 (4/5)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/161020">オーストリア・アルプスのお勧め。2006年 (3/5)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 鉄道・乗り物 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/160602">オーストリア・アルプスのお勧め。2006年 (2/5)。ハルシュタット。シャーフベルク登山鉄道。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/20/160537">オーストリア・アルプスのお勧め。2006年 (1/5)</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 マップ付 ウォーキング・散策</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/19/134110">東京）2014年4月5日。外濠公園、千鳥ヶ淵の桜。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/19/130603">東京都）2008年4月5日。青梅梅岩寺の枝垂桜。</a></td>
+</tr>
+<tr>
+<td class="category">鉄道・乗り物 花・植物 桜 ハイキング マップ付 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/19/124306">熊本県）2015年4月2日。南阿蘇鉄道。一心行の大桜。</a></td>
+</tr>
+<tr>
+<td class="category">イベント ウォーキング・散策 マップ付 花・植物 食べる 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/18/161507">神戸）東洋ナッツ「アーモンドフェスティバル」2018</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 ハイキング マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/16/155101">滋賀県→京都）2016年4月5日。琵琶湖疏水の桜。三井寺→山科→蹴上。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/16/095505">長野県）2006年4月22日。高遠城址公園の桜。勝間薬師堂のしだれ桜。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/16/085911">奈良県）2015年4月9日。又兵衛桜。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング 六甲山・摩耶山 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/15/140232">六甲山の自然・植物</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 梅 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/14/145259">兵庫県）芦屋ロックガーデン。保久良梅林は満開。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/13/160213">大阪梅田をモノクロ写真。DSC-HX90V。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 梅</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/12/162224">2015年3月25日。奈良県）月ヶ瀬梅林。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/12/153456">兵庫県）宝殿駅→竜山(石切場)→生石神社(石の宝殿)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 マップ付 梅</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/11/225911">兵庫県）綾部山梅林→世界の梅公園→山陽網干駅</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 写真・カメラ 地図・マップ 桜 コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/10/200112">2002年4月13日の福島三春滝桜。スマホのフォトスキャンアプリでL判プリント写真をデジタル化。</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/08/114914">南アフリカワインが美味しい。</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/07/083644">「8cm×12cmの小さなアート」作品追加(#402－#407)</a></td>
+</tr>
+<tr>
+<td class="category">サイエンス・自然・宇宙 コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/06/222811">宇宙の大きさを視覚的に体感(?)できる「Star Size Comparison 2」</a></td>
+</tr>
+<tr>
+<td class="category">旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/04/135138">三重県）伊勢神宮。おかげ横丁。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 サイクリング マップ付 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/04/130616">愛知県）渥美半島伊良湖岬サイクリング。菜の花畑。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ サイエンス・自然・宇宙 コンピュータ・Windows・スマホ 天気予報</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/03/210146">中国の一酸化炭素濃度がすごいことになっている！</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ サイエンス・自然・宇宙 コンピュータ・Windows・スマホ 天気予報</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/03/01/180843">風速、雨、雪、気温などの天気予測を地図で確認できる「Windy.com」が凄すぎる！</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/28/143640">兵庫県）武庫川河川敷下流散策</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/26/135955">実物を見てみたいゴッホの作品</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/25/174938">京都国立近代美術館「ゴッホ展」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 イベント 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/24/200206">奈良県）信貴山寅まつり。信貴山ハイキング。西信貴ケーブル。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 花・植物 写真・カメラ マップ付 梅 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/23/144909">梅田→中之島→大阪城(梅林)。OLYMPUS Tough TG-5で撮影。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/22/111938">Xerox Star / XINS 思い出</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/20/120124">「8cm×12cmの小さなアート」作品追加(#394－#401)</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/18/213928">山梨県）甲州ワイナリーマップ作成。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/17/221357">京都精華大学展2018</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 花・植物 マップ付 梅 大学・学食 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/16/142025">神戸）阪急岡本→保久良梅林→岡本梅林。</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/14/145331">大阪鶴見緑地「花博」夢の後。OLYMPUS Tough TG-5でモノクロ写真。</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/13/160045">東広島市西条の酒蔵マップ作成。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/12/105502">京都のおいしそうな甘味処／和菓子屋／ケーキ屋／パン屋のマップ作成。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/11/231506">2017年度 京都造形芸術大学 卒業展</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/09/170430">梅田→中之島→道頓堀→難波。GM1、TG-5、P10 Plusで、モノクロ写真＋カラー写真。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ 食べる 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/08/154330">神戸（三宮・元町）おいしいパン屋、ケーキ屋のマップ作成。</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール 地図・マップ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/07/162956">兵庫播磨の酒蔵マップ作成。</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/07/152103">「8cm×12cmの小さなアート」作品追加(#385－#393)</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/06/171857">はてなブログ、はてなフォトライフの写真一括バックアップ/ダウンロードツール修正。</a></td>
+</tr>
+<tr>
+<td class="category">イベント 食べる</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/04/162522">兵庫県）姫路とれとれ市「網干かきまつり」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 里山・田園・田舎 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/02/02/160653">冬の神戸「あいな里山公園」</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール 地図・マップ ウォーキング・散策 マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/30/165612">京都伏見の酒蔵マップ作成。伏見酒蔵めぐり（丹波橋→中書島）。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/27/155128">神戸元町散歩 with OLYMPUS Tough TG-5。Part 2：JR元町駅北側トアウエスト界隈。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/27/154608">神戸元町散歩 with OLYMPUS Tough TG-5。Part 1：モトコー界隈。</a></td>
+</tr>
+<tr>
+<td class="category">音楽</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/26/131601">個展のBGM。著作権フリー・ミュージック。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/25/155138">氷点下の神戸森林植物園。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 鉄道・乗り物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/21/212318">神戸）JR塩屋駅→塩屋大池→ジェームス邸→山陽電車滝の茶屋駅</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/20/084908">中国製マイクロフォーサーズカメラXiaomi YI M1</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 酒・ワイン・ビール</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/18/153711">兵庫県）明石酒蔵めぐり：山陽江井ヶ島→山陽魚住：赤石、神鷹、来楽。</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/17/162418">はてなブログ、はてなフォトライフの写真一括バックアップ/ダウンロードツールを作成。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/16/151404">神戸須磨離宮公園。十月桜。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/15/131035">神戸）綱敷天満神社の梅</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/14/204846">8cm×12cmの小さなアート：1日だけの個展</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/11/152459">日本酒、越後鶴亀。ラベルデザインがおしゃれ。</a></td>
+</tr>
+<tr>
+<td class="category">六甲山・摩耶山 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/11/080302">神戸）摩耶山、雪化粧。</a></td>
+</tr>
+<tr>
+<td class="category">音楽</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/10/154945">Bluetoothスピーカー「Anker SoundCore mini」を買った。</a></td>
+</tr>
+<tr>
+<td class="category">イベント</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/09/171026">兵庫県）西宮神社十日えびす</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 酒・ワイン・ビール 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/07/221613">ならまち散策→春日大社</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/07/215821">奈良県）生駒ケーブルカーで宝山寺（生駒聖天）</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/04/160027">神戸ミュージアムロード散策。OLYMPUS Tough TG-5＋FCON-T01で撮影。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/03/100020">正月用の花。OLYMPUS Tough TG-5で撮影。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2018/01/01/003954">新年あけましておめでとうございます。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/31/094838">京都、年末の錦市場。</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/28/150344">「8cm×12cmの小さなアート」作品追加(#379－#384)</a></td>
+</tr>
+<tr>
+<td class="category">動物・鳥・昆虫 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/25/101345">兵庫県）城崎温泉近く、ハチゴロウの戸島湿地のコウノトリ。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 旅行 マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/25/095509">兵庫県）休暇村竹野海岸→猫崎半島→ジャジャ山公園→竹野の街並み</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/21/220334">神戸三宮、元町：OLYMPUS Tough TG-5＋FCON-T01試し撮り。</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/20/142136">神戸）摩耶ケーブル駅→青谷道→原田の森ギャラリー</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/19/100322">「8cm×12cmの小さなアート」作品追加(#371－#378)</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/16/132147">デジカメOLYMPUS Tough TG-5を買った。顕微鏡モードの試し撮り。（Tough TG-5レビュー）</a></td>
+</tr>
+<tr>
+<td class="category">イベント 建築物・構造物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/13/222922">2017年の神戸ルミナリエ</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/11/220158">Windowsフォトビューアーの画像の表示順をフォルダの表示順に合わせる。</a></td>
+</tr>
+<tr>
+<td class="category">旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/11/102643">和歌山県）白浜：三段壁、千畳敷、京都大学白浜水族館、とれとれ市場南紀白浜。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 動物・鳥・昆虫</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/11/102236">和歌山県）白浜アドベンチャーワールド。パンダ。</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 建築物・構造物 大学・学食 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/07/141812">兵庫県）奥池→観音山→北山貯水池→甲山森林公園→関西学院大学</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/06/161838">大阪府）四条畷駅→飯盛山→むろいけ園地</a></td>
+</tr>
+<tr>
+<td class="category">イベント 建築物・構造物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/05/152319">2016年の神戸ルミナリエ</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/03/204036">兵庫県立美術館「エルミタージュ美術館展」</a></td>
+</tr>
+<tr>
+<td class="category">イベント 花・植物 酒・ワイン・ビール</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/02/222139">兵庫県）姫路温室植物園、灘菊酒造、姫路城</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/02/174234">また、神戸の西の空に「火の鳥」っぽい雲</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 紅葉 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/12/01/160648">摩耶山→黒岩尾根→市ケ原→布引→新神戸駅</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/30/143231">「8cm×12cmの小さなアート」作品追加(#356－#370)</a></td>
+</tr>
+<tr>
+<td class="category">イベント 酒・ワイン・ビール 食べる</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/27/082224">兵庫県）西日本B-1グランプリin明石。魚の棚「明石の地酒と食べ歩き」。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/24/154850">晩秋の大阪長居植物園</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/24/081445">11月24日。神戸の朝の風景。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 旅行 マップ付 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/23/143910">岐阜）明智鉄道明智駅→日本大正村散策</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 旅行 マップ付 鉄道・乗り物 古い町並み</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/23/142737">岐阜）明智鉄道岩村駅→古い町並み→岩村城跡→農村景観日本一展望所</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 酒・ワイン・ビール 大学・学食</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/19/211450">関西文化の日：京都文化博物館、京都国立近代美術館、京都大学総合博物館</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/18/191021">2017年、関西文化の日。横尾忠則現代美術館。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 マップ付 ハイキング 六甲山・摩耶山 紅葉 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/17/142507">神戸：平野橋→二本松林道→猩々池→大師道→元町駅。紅葉。</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/17/085035">「8cm×12cmの小さなアート」作品追加(#352－#355)</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/17/084157">「8cm×12cmの小さなアート」作品追加(#346－#351)</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/15/161034">2017神戸CWAJ版画展</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 旅行 マップ付 ハイキング 紅葉</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/13/134721">奈良：みたらい渓谷。紅葉。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 旅行 マップ付 ハイキング 紅葉</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/13/132838">奈良：洞川温泉。紅葉。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/13/100926">はてなブログのトップページを記事一覧ページに変更</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 花・植物 マップ付 紅葉 大学・学食 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/10/175437">京都東山方面散策：銀閣寺入り口→法然院→哲学の道→南禅寺→水路閣</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/09/101201">Webサイト「誕生花,花言葉」</a></td>
+</tr>
+<tr>
+<td class="category">イベント 美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/06/144112">兵庫県）宝塚現代美術 てん・てん</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 旅行 ハイキング マップ付 紅葉</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/06/141354">兵庫県香美町：木の殿堂、兎和野の大カツラ</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 旅行 マップ付 ハイキング 紅葉</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/06/135854">兵庫県）神鍋高原、たじま高原植物園、和知の大カツラ</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 紅葉 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/02/160846">摩耶山→穂高湖→シェール道→炭ヶ谷→北神急行谷上駅</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ マップ付 古い町並み</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/11/01/154636">奈良ならまち周辺散策。写真は、HUAWEI P10 PlusとDMC-GM1＋30mm/F2.8。</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/31/141316">摩耶ケーブル駅→青谷道→JR灘駅。台風21号爪痕。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 紅葉 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/27/162845">紅葉シーズンはじまりの神戸森林植物園</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/26/154739">兵庫県）里山ハイキング。神戸電鉄箕谷駅→丹生山田の里</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/25/144050">HUAWEI P10 Plusモノクロ写真：鉄道高架下・高架横</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/22/142855">「8cm×12cmの小さなアート」作品追加(#340－#345)</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/21/100116">「8cm×12cmの小さなアート」作品追加(#333－#339)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/18/153653">兵庫県）里山ハイキング。JR福知山線古市駅→白髪岳麓→草野駅</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/17/104655">「8cm×12cmの小さなアート」作品追加(#328－#332)</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/15/135605">「8cm×12cmの小さなアート」作品追加(#319－#327)</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/14/161823">大丸神戸店「オルセー美術館 至宝のリマスターアート展」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/14/083026">丹波篠山味まつりで買った小さな丹波焼の一輪挿しに花を挿してみた。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 里山・田園・田舎 棚田</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/12/123020">奈良県）里山ハイキング。近鉄生駒線一分→暗峠手前→南生駒。コスモス。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/12/121038">東アジア文化都市2017 京都「アジア回廊 現代美術展」</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 酒・ワイン・ビール イベント マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/12/112639">兵庫県）丹波篠山味まつりに黒大豆枝豆を買いに行く。</a></td>
+</tr>
+<tr>
+<td class="category">イベント 旅行</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/12/105511">岐阜県）多治見：たじみ茶碗まつり、本町オリベストリート</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント 旅行 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/12/104206">多治見：モザイクタイルミュージアム、国際陶磁器フェスティバル美濃etc.</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/08/223017">複数の焦点距離のレンズを搭載したデジカメ「Light L16」登場</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/06/221831">神戸の西の空に「火の鳥」っぽい雲（ツイッターでも話題）</a></td>
+</tr>
+<tr>
+<td class="category">イベント 動物・鳥・昆虫 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/05/085255">KOBE観光の日。神戸王子動物園無料開放。パンダ。</a></td>
+</tr>
+<tr>
+<td class="category">イベント 酒・ワイン・ビール 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/01/160317">神戸イタリアンフェス</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 里山・田園・田舎</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/10/01/152432">大阪府）とよのコスモスの里近くの里山に咲くコスモス</a></td>
+</tr>
+<tr>
+<td class="category">イベント 酒・ワイン・ビール 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/29/160228">「灘の酒」と食フェスティバル &amp;「Ｇｏ！Ｇｏ！灘五郷！」トレイン</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/29/144344">神戸乙仲通周辺をHUAWEI P10 Plusでモノクロ写真</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 建築物・構造物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/29/142442">神戸）鈴蘭台→石井ダム→鳥原貯水池</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/25/162458">摩耶ロープウェー星の駅(摩耶山掬星台)→杣谷川</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/24/205117">奈良）柳生街道（大柳生口→柳生）ハイキング</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 酒・ワイン・ビール マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/23/162700">灘五郷「今津郷・西宮郷」酒蔵めぐり</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/23/091112">「8cm×12cmの小さなアート」作品追加(#310－#318)</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/21/143533">大阪梅田をHUAWEI P10 Plusでモノクロ写真</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 大学・学食 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/20/091437">神戸）石屋川→六甲山高羽道→神戸大学→新在家</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 里山・田園・田舎 動物・鳥・昆虫 棚田</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/20/085237">大阪府）千早赤阪村「下赤阪の棚田」ハイキング Part.2</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 里山・田園・田舎</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/16/094627">大阪府）妙見口→初谷渓谷→妙見山→上杉尾根→妙見口</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/14/150333">JR玉造駅→空堀商店街→南堀江→阪神桜川駅。HUAWEI P10 Plusで撮影。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 里山・田園・田舎 棚田</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/14/081117">奈良県）明日香村稲渕の棚田「かかしコンテスト」「彼岸花祭り」</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/13/083616">HUAWEI P10 Plusのワイドアパーチャ情報はJPEGファイル内に持っている。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/11/081259">京都散策。今出川→上七軒→船岡温泉。（P10 Plus写真）</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/06/150059">神戸元町高架下（モトコー）をHUAWEI P10 Plusでモノクロ写真。P10 Plusカメラ機能レビュー。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎 棚田</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/04/161917">大阪府）千早赤阪村「下赤阪の棚田」ハイキング</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/02/092520">「8cm×12cmの小さなアート」作品追加(#304－#309)</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 里山・田園・田舎</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/09/01/173040">大阪府）豊能郡能勢町田園風景と野間の大けやき</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎 棚田</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/31/162544">大阪府）里山ハイキング。能勢町「長谷の棚田」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/28/175059">京都）嵐山→愛宕念仏寺→大沢池→広沢池</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/21/103727">京都）貴船口→貴船神社→鞍馬寺→鞍馬</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/19/100810">「8cm×12cmの小さなアート」作品追加(#293－#303)</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 はてなブログ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/08/123244">FC2ブログからはてなブログへの引越しは簡単だった</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/07/100448">大阪）勝尾寺→箕面の滝</a></td>
+</tr>
+<tr>
+<td class="category">イベント 酒・ワイン・ビール 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/05/144123">神戸「みなとこうべ海上花火大会」で酒の無料試飲ができる「カンパイKOBE」</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/08/03/153954">「8cm×12cmの小さなアート」作品追加(#286－#292)。謄写版（ガリ版）作品。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/30/104103">作品づくりに使っている紙「ペセソレイユ」「白樺」「甍」</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/29/131517">「8cm×12cmの小さなアート」作品追加(#278－#285)。謄写版（ガリ版）作品。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 旅行 建築物・構造物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/25/142334">長崎）天草の旅。暑かった。</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/20/110200">「8cm×12cmの小さなアート」作品追加(#271－#277)</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/19/151551">謄写版(ガリ版)を使ってアート作品を作ってみた。</a></td>
+</tr>
+<tr>
+<td class="category">動物・鳥・昆虫 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/16/081449">神戸市立須磨海浜水族園「フウセンウオ」</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/15/174449">「8cm×12cmの小さなアート」サーバー変更。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 8cm×12cmの小さなアート コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/15/160351">ImageMagick(convert)とAdobe Photoshop CS2でアート作品作成</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 8cm×12cmの小さなアート ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/14/183245">カラーをランダムに変えてアート作品</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 8cm×12cmの小さなアート サイエンス・自然・宇宙 ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/14/171527">物体落下シミュレーションphysicSketchを使ってアート作品</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/14/142213">「8cm×12cmの小さなアート」作品追加(#257－#270)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/06/155952">関西にも乗鞍岳が欲しい。</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/05/143641">Infinite Scrollを使った無限スクロール版「8cm×12cmの小さなアート」</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/01/162850">3年目のシラサギカヤツリに花(？)が咲く。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/07/01/082015">サボテンの花は夜に咲く？。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/30/143525">Google Maps API V3ギャラリーマップ改修</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/30/121042">ブラウザの表示幅・ピクセル(pixel)チェック用ページ</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/27/095916">「8cm×12cmの小さなアート」作品追加(#248－#256)</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/26/143023">今日買った花：ペンタス、エキザカム、セイロンランティア</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/25/175840">滋賀県）己高庵→鶏足寺→石道寺</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/25/173250">滋賀県）賤ケ岳を通って余呉湖一周</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/22/163353">神戸ギャラリーめぐり：谷守佳代、鄭相和、浦島晶子</a></td>
+</tr>
+<tr>
+<td class="category">写真・カメラ ホームページ、Web作成 コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/21/101243">写真をインターネットにアップロードする前にやっている事。画像回転（AZURE automatic）＆縮小（縮小専用）</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/19/154025">神戸森林植物園(あじさい)→学習の森→再度公園→大龍寺→猩々池→大師道→元町駅</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 マップ付 ハイキング</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/18/093425">奈良県）近鉄南生駒駅→矢田寺(あじさい)→近鉄平群駅</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/15/152945">六甲ケーブル山上駅→六甲ガーデンテラス→紅葉谷→炭屋道→魚屋道→有馬温泉</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/14/160924">摩耶ロープウェー星の駅→三国池→六甲ガーデンテラス→六甲ケーブル山上駅</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 酒・ワイン・ビール マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/13/201214">サントリー京都ビール工場見学←長岡天神</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/12/144959">摩耶ロープウェー星の駅→天狗道→学校林道→旧摩耶道→新神戸駅</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/10/220753">京都府）里山ハイキング。宇治茶の郷「和束の茶畑」</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/09/152405">「8cm×12cmの小さなアート」作品追加(#239－#247)</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/09/144427">摩耶ケーブル駅→虹の駅→青谷道→王子公園駅</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/08/171141">京都四条河原町→寺町通→富小路→錦市場 60mmレンズを持って散策（カメラはDMC-GM1）</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/05/155455">渦森台→六甲ケーブル山上駅→記念碑台→シュラインロード→神戸電鉄有馬口駅</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/06/01/144057">大阪梅田から中崎町 60mmレンズを持って散策（カメラはDMC-GM1）</a></td>
+</tr>
+<tr>
+<td class="category">イベント ハイキング 里山・田園・田舎 マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/29/113528">神戸「あいな里山公園」一周年</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/29/111528">京都大原ウォーキング</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 酒・ワイン・ビール マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/23/162438">灘五郷「西郷・御影郷・魚崎郷」酒蔵めぐり</a></td>
+</tr>
+<tr>
+<td class="category">酒・ワイン・ビール 地図・マップ 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/23/131757">神戸・西宮 灘五郷の酒蔵マップ作成。</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 写真・カメラ マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/22/161616">神戸）三宮、北野、元町 60mmレンズを持って散策（カメラはDMC-GM1）</a></td>
+</tr>
+<tr>
+<td class="category">イベント ハイキング マップ付 里山・田園・田舎 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/21/101704">京都）美山かやぶきの里 ウォーキングと一斉放水</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/18/182813">大阪府）里山ハイキング。豊能町切畑、余野。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング サイクリング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/15/180508">岡山県）蒜山高原自転車道 サイクリング</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/15/175720">岡山県）休暇村蒜山高原⇔ひるぜんジャージーランド</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/11/093035">「8cm×12cmの小さなアート」作品追加(#230－#238)</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 マップ付 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/05/141440">京都）竹の寺地蔵院→松尾大社</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 里山・田園・田舎</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/05/133241">兵庫県）里山ハイキング。日生中央→村上新田→青木間歩→多田銀銅山悠久の館→静思館</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/05/05/130251">奈良）滝坂道→春日大社（藤の花）→東大寺</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/30/182052">神戸森林植物園のシャクナゲ</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/28/160634">神戸）奥池→観音山→北山貯水池→甲山→甲山森林公園→甲陽園</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 花・植物 マップ付 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/25/174311">東洋ナッツアーモンドフェスティバルでもらったアーモンドの種</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 花・植物 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/24/140723">六甲山系）東おたふく山→雨ヶ峠→五助ダム(堰堤)→住吉台。新緑2017。</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/23/142540">JR福知山線廃線跡ハイキングコース（西宮名塩→武田尾）</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/18/151538">神戸にはアルプスもある：須磨アルプス（馬の背）</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/14/174748">神戸には穂高や河童橋もある：摩耶山→穂高湖→シェール道→トゥエンティクロス→布引→新神戸</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 鉄道・乗り物 桜 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/14/171301">神戸摩耶ケーブル、ロープウェー、桜トンネル。</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/13/161105">柔らかい油性色鉛筆が好きなら、プリズマカラーがおすすめ。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/11/193206">「ブロック(コンテナ)全体は中央揃え＋中の要素(複数画像)は左寄せ」をJavaScriptを使わないでCSSのみで実現できる方法</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/11/121924">滋賀県）彦根城の桜</a></td>
+</tr>
+<tr>
+<td class="category">旅行 ハイキング マップ付</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/11/121351">近江八幡「西の湖水郷」散策</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 花・植物 旅行 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/11/115554">滋賀県）近江八幡「八幡堀」の桜</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 花・植物 マップ付 桜 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/08/155825">神戸の穴場的な桜スポット「宇治川沿いの桜並木」</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング マップ付 花・植物 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/05/100914">奈良県）山の辺の道（桜井から柳本まで）の桜とモクレン</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 桜 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/04/03/081311">京都府立植物園の桜と春の花</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/31/083527">神戸摩耶山ケーブル・ロープウェー「まやビューラインサポーターの会」に入会</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/29/094131">「8cm×12cmの小さなアート」作品追加(#218－#229)</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 地図・マップ 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/26/151037">一本桜名木の都道府県別1位は福島県、2位は長野県</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/15/092041">CSSで画像を正方形枠内で上下左右中央揃えするシンプルな方法</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/13/143736">写真/画像をサムネイル一覧するHTMLサンプル（ブロック全体は中央揃え＋中の複数画像は左寄せ）</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/10/140555">「8cm×12cmの小さなアート」作品追加(#208－#217)</a></td>
+</tr>
+<tr>
+<td class="category">マップ付 ハイキング 六甲山・摩耶山 神戸 山歩き・登山</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/09/153232">六甲山系）御影→打越山→横池→風吹岩→保久良梅林→岡本</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 梅 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/03/05/161607">京都）城南宮のしだれ梅と椿</a></td>
+</tr>
+<tr>
+<td class="category">ウォーキング・散策 花・植物 梅</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/02/28/161402">大阪）和泉リサイクル環境公園の梅林</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング 梅 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/02/22/100228">神戸）阪急岡本駅の北側にある岡本梅林公園に行ってきた</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング マップ付 梅</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/02/20/110341">和歌山）岩代大梅林ハイキング</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 ハイキング 梅</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/02/20/104848">和歌山）南部梅林とわさび大根とひとはめ</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/02/03/104320">大阪市植物園「咲くやこの花館」で「カカオとコーヒー展」</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/01/18/093037">「8cm×12cmの小さなアート」作品追加(#199－#207)</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 イベント 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/01/14/164657">神戸森林植物園とんどやき。シモバシラ。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 食べる 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2017/01/13/130426">コールラビを買って食べてみた</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/12/21/090152">挿し木したカポックが大きくなった。</a></td>
+</tr>
+<tr>
+<td class="category">旅行 鉄道・乗り物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/12/12/105237">「やまぐち幕末ISHINきっぷ」が超お得</a></td>
+</tr>
+<tr>
+<td class="category">その他</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/12/09/070108">セイコーマートが顧客満足度NO.1</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/10/18/084036">「8cm×12cmの小さなアート」作品追加(#189－#198)</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/10/14/081907">笹岡由梨子のシュールな動画作品</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/10/07/182613">神戸森林植物園のコナラもナラ枯れ被害</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/09/16/100837">「8cm×12cmの小さなアート」作品追加(#181－#188)</a></td>
+</tr>
+<tr>
+<td class="category">動物・鳥・昆虫</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/08/28/122734">サワガニ三態？</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/08/26/095407">木版画の簡易見当板の作り方</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/08/21/131732">「8cm×12cmの小さなアート」作品追加(#173－#180)</a></td>
+</tr>
+<tr>
+<td class="category">コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/08/12/154654">Word(ワード)でアンケートの評価欄を数直線形式で作成</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/08/05/103955">「8cm×12cmの小さなアート」作品追加(#164－#172)</a></td>
+</tr>
+<tr>
+<td class="category">動物・鳥・昆虫 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/08/01/111051">下鴨神社に大量のセミの抜け殻</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/07/03/141901">「8cm×12cmの小さなアート」作品追加(#155－#163)</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 京都</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/06/27/150316">京都宇治）三室戸寺のハスとあじさい</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/06/14/182521">Avira Browser Safetyを使うとGoogleマップのストリート ビューが表示されない</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/06/09/142009">ギャラリーで絵を買った。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/06/09/114529">カポックの茎を挿し木したら、簡単に芽が出てきた。</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/06/09/110749">「8cm×12cmの小さなアート」作品追加(#144－#154)</a></td>
+</tr>
+<tr>
+<td class="category">ハイキング イベント 里山・田園・田舎 神戸</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/05/30/095003">神戸「あいな里山公園」オープン</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/05/24/140716">「8cm×12cmの小さなアート」作品追加(#123－#143)</a></td>
+</tr>
+<tr>
+<td class="category">イベント 花・植物</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/05/13/171853">高知県）牧野植物園の植物スタンプラリーが太っ腹すぎる</a></td>
+</tr>
+<tr>
+<td class="category">音楽</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/04/12/153459">私の捨てられないレコードアルバム(LP盤) ベスト10</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 旅行 桜</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/04/04/130434">福井の穴場的な桜「休暇村越前三国」「レンゴーの桜並木」</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ 棚田 ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/31/153829">「日本百選：兵庫県 マップ」作成。</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/28/125846">「日本三百名山マップ」作成。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 地図・マップ 桜 ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/28/123057">「日本のさくら名所100選マップ」作成。</a></td>
+</tr>
+<tr>
+<td class="category">花・植物 地図・マップ 桜 ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/28/103833">桜名木マップ作成。</a></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 コンピュータ・Windows・スマホ</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/27/134726">パソコン用Webポータルシステム「MyHome Portal」</a></td>
+</tr>
+<tr>
+<td class="category">8cm×12cmの小さなアート</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/27/123748">「8cm×12cmの小さなアート」作品追加</a></td>
+</tr>
+<tr>
+<td class="category">美術・アート イベント</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/27/113954">瀬戸内国際芸術祭 2016</a></td>
+</tr>
+<tr>
+<td class="category">地図・マップ ホームページ、Web作成</td>
+<td><a href="https://2ndart.hatenablog.com/entry/2016/03/26/234633">神戸（三宮・元町）のギャラリー・マップ</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<!-- https://datatables.net/blog/2017-01-19 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
+<script type="text/javascript">
+$(function() {
+	var table = $('#dataTable').DataTable({
+		language: {	// 日本語化
+			url: "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+		},
+		paging: false,		// ページングしない。
+		ordering: false,	// ソートしない。
+		mark: true		// 検索文字列ハイライト (by mark.js)
+	});
+});
+</script>
+</body>
+</html>
