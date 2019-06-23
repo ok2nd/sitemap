@@ -22,7 +22,7 @@ sr1.Type = adTypeText;
 sr1.charset = "utf-8";
 sr1.Open();
 sr1.LoadFromFile("i-header.html");
-var html = sr1.ReadText(adReadAll);	// ← i-header.html
+var html = sr1.ReadText(adReadAll);
 sr1.Close();
 
 var sr2 = new ActiveXObject("ADODB.Stream");
@@ -30,6 +30,8 @@ sr2.Type = adTypeText;
 sr2.charset = "utf-8";
 sr2.Open();
 sr2.LoadFromFile("2ndart.hatenablog.com.export.txt");	//  はてなブログ エクスポート・ファイル
+//               ↑↑↑ 名前を変えて使う。
+
 var str = sr2.ReadText( adReadAll );
 sr2.Close();
 
@@ -54,6 +56,7 @@ for (var i=0; i<line_ary.length; i++) {
 	}
 	if (line_ary[i].substring(0,15) == 'STATUS: Publish') {
 		stw.WriteText('<li><a href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></li>\n');
+//              				 ↑↑↑ 名前を変えて使う。
 	}
 }
 stw.WriteText('</ol>\n</body>\n</html>\n');
