@@ -1,0 +1,37 @@
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<title>はてなブログ 晴歩雨描 記事一覧</title>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<style>
+body {
+	margin: 10px;
+}
+h1 {
+	font-size: 20px;
+}
+table {
+	font-size: 12px;
+}
+.category {
+	width: 100px;
+}
+/* 検索文字列ハイライト（mark.js）用*/
+mark {
+	background: gold;
+	color: black;
+}
+</style>
+</head>
+<body>
+<h1>はてなブログ「晴歩雨描」記事一覧</h1>
+<div id="box" style="max-width:800px;">
+<table id="dataTable" style="width:100%;">
+<thead>
+<tr>
+	<td class="category">カテゴリー</td>
+	<td></td>
+	<td>記事</td>
+</tr>
+</thead>
