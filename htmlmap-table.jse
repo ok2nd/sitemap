@@ -51,12 +51,13 @@ var sw_publish = false;
 var title;
 var url;
 var category = '';
+var ymd;
 for (var i=0; i<line_ary.length; i++) {
 	if (line_ary[i].substring(0,6) == 'TITLE:') {
 		if (sw_category && sw_publish) {
 			stw.WriteText('\n<tr>');
 			stw.WriteText('\n<td class="category">' + category + '</td>\n');
-			stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></td>');
+			stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a> ' + ymd + '</td>');
 //              						 ↑↑↑ 名前を変えて使う。
 			stw.WriteText('\n</tr>');
 			sw_category = false;
@@ -67,6 +68,7 @@ for (var i=0; i<line_ary.length; i++) {
 	}
 	if (line_ary[i].substring(0,9) == 'BASENAME:') {
 		url = line_ary[i].slice(10);
+		ymd = url.substring(0,10);
 	}
 	if (line_ary[i].substring(0,9) == 'CATEGORY:') {
 		sw_category = true;

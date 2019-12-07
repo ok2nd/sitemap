@@ -74,7 +74,6 @@ for (var i=0; i<line_ary.length; i++) {
 	if (line_ary[i].substring(0,6) == 'IMAGE:') {
 		img = line_ary[i].slice(7);
 	}
-
 	if (line_ary[i].substring(0,9) == 'CATEGORY:') {
 		sw_category = true;
 		if (category != '') {
