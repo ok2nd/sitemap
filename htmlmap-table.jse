@@ -57,7 +57,7 @@ for (var i=0; i<line_ary.length; i++) {
 		if (sw_category && sw_publish) {
 			stw.WriteText('\n<tr>');
 			stw.WriteText('\n<td class="category">' + category + '</td>\n');
-			stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a> ' + ymd + '</td>');
+			stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a> <span style="color:Orangered;">' + ymd + '</span></td>');
 //              						 ↑↑↑ 名前を変えて使う。
 			stw.WriteText('\n</tr>');
 			sw_category = false;
