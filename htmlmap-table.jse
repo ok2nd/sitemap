@@ -4,6 +4,7 @@
 /*
 TITLE: ×××××××××
 BASENAME: 2018/01/10/123456
+STATUS: Publish
 CATEGORY: ＸＸＸＸＸ
 CATEGORY: ＸＸＸＸＸ
 */
@@ -62,8 +63,8 @@ for (var i=0; i<line_ary.length; i++) {
 			stw.WriteText('\n</tr>');
 			sw_category = false;
 			sw_publish = false;
-			category = '';
 		}
+		category = '';		// 「STATUS: Draft」もクリア
 		title = line_ary[i].slice(7);
 	}
 	if (line_ary[i].substring(0,9) == 'BASENAME:') {
@@ -81,6 +82,14 @@ for (var i=0; i<line_ary.length; i++) {
 		sw_publish = true;
 	}
 }
+
+/* --- 最後の1件 --- */
+stw.WriteText('\n<tr>');
+stw.WriteText('\n<td class="category">' + category + '</td>\n');
+stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a> <span style="color:Orangered;">' + ymd + '</span></td>');
+stw.WriteText('\n</tr>');
+/* ----------------- */
+
 stw.WriteText('\n</tbody>\n</table>\n');
 
 var sr3 = new ActiveXObject("ADODB.Stream");
