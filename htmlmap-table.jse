@@ -56,14 +56,10 @@ var ymd;
 for (var i=0; i<line_ary.length; i++) {
 	if (line_ary[i].substring(0,6) == 'TITLE:') {
 		if (sw_category && sw_publish) {
-			stw.WriteText('\n<tr>');
-			stw.WriteText('\n<td class="category">' + category + '</td>\n');
-			stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a> <span style="color:Orangered;">' + ymd + '</span></td>');
-//              						 ↑↑↑ 名前を変えて使う。
-			stw.WriteText('\n</tr>');
-			sw_category = false;
-			sw_publish = false;
+			html_write(category, title, url, ymd);
 		}
+		sw_category = false;
+		sw_publish = false;
 		category = '';		// 「STATUS: Draft」もクリア
 		title = line_ary[i].slice(7);
 	}
@@ -82,14 +78,7 @@ for (var i=0; i<line_ary.length; i++) {
 		sw_publish = true;
 	}
 }
-
-/* --- 最後の1件 --- */
-stw.WriteText('\n<tr>');
-stw.WriteText('\n<td class="category">' + category + '</td>\n');
-stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a> <span style="color:Orangered;">' + ymd + '</span></td>');
-stw.WriteText('\n</tr>');
-/* ----------------- */
-
+html_write(category, title, url, ymd);		// 最後の1件
 stw.WriteText('\n</tbody>\n</table>\n');
 
 var sr3 = new ActiveXObject("ADODB.Stream");
@@ -97,10 +86,17 @@ sr3.Type = adTypeText;
 sr3.charset = "utf-8";
 sr3.Open();
 sr3.LoadFromFile("i-footer-table.html");
-var footer = sr3.ReadText(adReadAll);	// ← i-footer-table.html
+var footer = sr3.ReadText(adReadAll);		// ← i-footer-table.html
 sr3.Close();
 
 stw.WriteText(footer);
 
 stw.SaveToFile("hatena-sitemap-table.html", adSaveCreateOverWrite);
 stw.Close();
+
+function html_write (category, title, url, ymd) {
+	stw.WriteText('\n<tr>');
+	stw.WriteText('\n<td class="category">' + category + '</td>\n');
+	stw.WriteText('<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a> <span style="color:Orangered;">' + ymd + '</span></td>');
+	stw.WriteText('\n</tr>');
+}
