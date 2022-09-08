@@ -42,21 +42,41 @@ stw.Open();
 
 stw.WriteText(html);	// i-header.html → hatena-sitemap.html
 
+// 以下の範囲は対象としない。
+/*
+BODY:
+
+-----
+--------
+*/
+
 stw.WriteText('\n<ol>\n');
 str = str.replace(/\r/g, '');
 var line_ary = str.split(/\n/);
 var title;
 var url;
+var body = false;	// BODY:
+var bodyend = true;	// --------
 for (var i=0; i<line_ary.length; i++) {
-	if (line_ary[i].substring(0,6) == 'TITLE:') {
-		title = line_ary[i].slice(7);
+	if (!body) {
+		if (line_ary[i].substring(0,6) == 'TITLE:') {
+			title = line_ary[i].slice(7);
+		}
+		if (line_ary[i].substring(0,9) == 'BASENAME:') {
+			url = line_ary[i].slice(10);
+		}
+		if (line_ary[i].substring(0,15) == 'STATUS: Publish') {
+			stw.WriteText('<li><a href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></li>\n');
+						//	↑↑↑ 名前を変えて使う。
+		}
 	}
-	if (line_ary[i].substring(0,9) == 'BASENAME:') {
-		url = line_ary[i].slice(10);
+	if (line_ary[i].substring(0,5) == 'BODY:') {
+		body = true;
+		bodyend = false;
 	}
-	if (line_ary[i].substring(0,15) == 'STATUS: Publish') {
-		stw.WriteText('<li><a href="https://2ndart.hatenablog.com/entry/' + url + '">' + title + '</a></li>\n');
-//              				 ↑↑↑ 名前を変えて使う。
+	if (line_ary[i] == '-----') {
+		bodyend = true;
+		body = false;
 	}
 }
 stw.WriteText('</ol>\n</body>\n</html>\n');

@@ -44,6 +44,14 @@ stw.Open();
 
 stw.WriteText(html);	// i-header-table-img.html → hatena-sitemap-table-img.html
 
+// 以下の範囲は対象としない。
+/*
+BODY:
+
+-----
+--------
+*/
+
 stw.WriteText('<tbody>');
 str = str.replace(/\r/g, '');
 var line_ary = str.split(/\n/);
@@ -54,32 +62,44 @@ var url;
 var img;
 var category = '';
 var ymd;
+var body = false;	// BODY:
+var bodyend = true;	// --------
 for (var i=0; i<line_ary.length; i++) {
-	if (line_ary[i].substring(0,6) == 'TITLE:') {
-		if (sw_category && sw_publish) {
-			html_write(category, title, url, ymd, img);
+	if (!body) {
+		if (line_ary[i].substring(0,6) == 'TITLE:') {
+			if (sw_category && sw_publish) {
+				html_write(category, title, url, ymd, img);
+			}
+			sw_category = false;
+			sw_publish = false;
+			category = '';		// 「STATUS: Draft」もクリア
+			title = line_ary[i].slice(7);
 		}
-		sw_category = false;
-		sw_publish = false;
-		category = '';		// 「STATUS: Draft」もクリア
-		title = line_ary[i].slice(7);
-	}
-	if (line_ary[i].substring(0,9) == 'BASENAME:') {
-		url = line_ary[i].slice(10);
-		ymd = url.substring(0,10);
-	}
-	if (line_ary[i].substring(0,6) == 'IMAGE:') {
-		img = line_ary[i].slice(7);
-	}
-	if (line_ary[i].substring(0,9) == 'CATEGORY:') {
-		sw_category = true;
-		if (category != '') {
-			category += ' ';
+		if (line_ary[i].substring(0,9) == 'BASENAME:') {
+			url = line_ary[i].slice(10);
+			ymd = url.substring(0,10);
 		}
-		category += line_ary[i].slice(10);
+		if (line_ary[i].substring(0,6) == 'IMAGE:') {
+			img = line_ary[i].slice(7);
+		}
+		if (line_ary[i].substring(0,9) == 'CATEGORY:') {
+			sw_category = true;
+			if (category != '') {
+				category += ' ';
+			}
+			category += line_ary[i].slice(10);
+		}
+		if (line_ary[i].substring(0,15) == 'STATUS: Publish') {
+			sw_publish = true;
+		}
 	}
-	if (line_ary[i].substring(0,15) == 'STATUS: Publish') {
-		sw_publish = true;
+	if (line_ary[i].substring(0,5) == 'BODY:') {
+		body = true;
+		bodyend = false;
+	}
+	if (line_ary[i] == '-----') {
+		bodyend = true;
+		body = false;
 	}
 }
 html_write(category, title, url, ymd, img);		// 最後の1件
