@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="footpath2nd@gmail.com">
+<meta name="keywords" content="digital camera">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta property="og:title" content="晴歩雨描ブログ 写真補正・加工 ノウハウ記事一覧">
+<meta property="og:description" content="カメラ比較、写真色補正、色加工、アート加工、モノクロ化、合成加工、ゆがみ補正、解像度補正、超広角、宙玉、印刷。">
+<meta property="og:image" content="https://ok2nd.sakura.ne.jp/home/photo/20190321164144.png">
+<link rel="shortcut icon" href="favicon/house_red.ico" type="image/ico">
+<link rel="icon" href="favicon/house_red.ico" type="image/ico">
+<link rel="apple-touch-icon" href="favicon/house_red.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<title>晴歩雨描ブログ 写真補正・加工 ノウハウ記事一覧</title>
+<style>
+body, img {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+}
+div#page_header {
+	margin: 0 0 12px 0;
+	padding: 14px 20px 14px 20px;
+	text-align: left;
+	background-color: #606060;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: bold;
+}
+div#page_footer {
+	margin: 20px 0 0 0;
+	padding: 12px 0;
+	text-align: center;
+	background-color: #888;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+}
+div#page_contents {
+	padding: 0 10px;
+	font-size: 12px;
+}
+table {
+	margin: 10px 0;
+	border-spacing:1px;
+	border-collapse: separate;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #A0A0A0;
+	background-color: #A0A0A0;
+}
+td {
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	border-style: none;
+	border-width: 1px;
+	border-color: #A0A0A0;
+	padding: 2px;
+	background-color: #fff;
+}
+img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover; 
+}
+#description {
+	margin: 0 0 4px 0;
+}
+table a:link { color: #0060c0; }
+table a:visited { color: #0060c0; }
+table a:hover { color: #f43316; }
+table a:active { color: #f43316; }
+ul a:link { color: #0060c0; }
+ul a:visited { color: #0060c0; }
+ul a:hover { color: #f43316; }
+ul a:active { color: #f43316; }
+figure{
+	margin: 0;
+	padding: 0;
+}
+figcaption {
+	margin: 0;
+	padding: 0;
+}
+#gallery {
+	margin: 7px;
+	padding: 0;
+}
+.box-frame {
+	margin: 4px;
+	width: 120px;
+	height: 160px;
+	float: left;			/* 横並び display:inline-block; ではうまくいかない */
+	display: flex;			/* flex box */
+	justify-content: center;	/* ブロック内で左右中央揃え */
+	align-items: center;		/* ブロック内で上下中央揃え */
+	padding: 7px;			/* ↓ 影付きフレーム */
+	border: 1px solid #ccc;
+	background: #fff;
+	box-shadow: 1px 1px 5px rgba(20,20,20,0.2);
+	border-radius: 4px;
+}
+.vignette {
+	position: relative;
+}
+.vignette:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.6),
+	inset 0 0 100px rgba(0, 0, 0, 0.4);
+}
+.vignette img {
+	display: block;	/* これがないと余分な枠が付いてしまう。*/
+}
+.section {
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+.section p {
+	margin: 0;
+	padding: 0;
+	color: Steelblue;
+	font-weight: bold;
+}
+.section ul {
+	clear: both;
+	margin: 0;
+	padding: 0 0 0 30px;
+	list-style: none;
+}
+li {
+	background-image: url("img/accept.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	list-style: none;
+	list-style-type: none;
+	margin: 6px;
+	padding: 0 0 0 24px;
+}
+.red {
+	font-weight: bold;
+	color: Orangered;
+}
+.pink {
+	font-weight: bold;
+	color: Magenta;
+}
+</style>
+</head>
+<body>
+<header>
+<div id="page_header">晴歩雨描ブログ　写真補正・加工　ノウハウ（？）記事一覧</div>
+</header>
+
+	<ul><li><a href="" target="_blank"></a></li></ul>
+
+<!-- ********************* -->
+<div class="section">
+	<p>カメラ比較</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/06/12/110116" target="_blank">備忘録：デジカメ仕様＆画質比較サイト、デジカメ写真サンプルサイト</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/11/06/154738" target="_blank">デジカメ：<span class="pink">センサーサイズ</span>が大きければ、画質は上がるのか？</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/02/22/111455" target="_blank"><span class="pink">マイクロフォーサーズ</span>は本当にコンパクトなのか？中望遠レンズの<span class="pink">ボケ</span>量を比較。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/05/23/171538" target="_blank">焦点距離24mmのカメラ・レンズの<span class="pink">ボケ</span>量(有効口径)比較。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/05/20/133230" target="_blank">LUMIX GM1＋LEICA 15mm/F1.7は、最強の<span class="pink">スナップシューター</span>。GR III、XF10と比較。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/10/05/145542" target="_blank">コンデジ画質比較 by Imaging Resource, TwentyTwenty</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/05/02/134421" target="_blank">1型デジカメG7X MarkII、RX100M5、DMC-LX9 仕様比較</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/27/164241" target="_blank">HTML＋JavaScript）パソコンローカルの2つの写真/画像をドラッグ＆ドロップして横並びに表示して比較するツール</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/05/15/230214" target="_blank"><span class="pink">スマホカメラ</span>の<span class="pink">センサーサイズ</span>比較。iPhone 11、HUAWEI P30 Pro、Xperia 1 II、Galaxy S20 ...</a></li></ul>
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>霞（かすみ）の除去</p>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/08/26/175234" target="_blank">「<span class="red">GIMP</span>」で、<span class="pink">もや・かすみ</span>の除去を試してみた。（色レベルの調整、トーンカーブの調整）</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/04/11/143200" target="_blank">「<span class="red">Photoshop Express</span>」の「<span class="pink">もや・かすみ</span>の除去」を試す。</a></li></ul>
+
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2021/01/23/163807" target="_blank">Webブラウザで写真編集ができるサイト「<span class="red">Polarr</span>」で、色の調整と、<span class="pink">もや・かすみ</span>の除去を試す。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/11/08/102154" target="_blank">「<span class="red">SILKYPIX JPEG Photography 10</span>」で、<span class="pink">もや・かすみ</span>の除去。（自動調整）</a></li></ul>
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/11/08/123903" target="_blank"><span class="red">SILKYPIX JPEG Photography 10</span>）白背景が<span class="pink">くすんでしまった写真</span>を明るくする。（自動調整）</a></li></ul>
+
+</div>
+
+
+
+<!-- ********************* -->
+<div class="section">
+	<p>明るさ・色補正</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/08/28/145114" target="_blank"><span class="red">GIMP</span>による写真の明るさ（明度）や鮮やかさ（<span class="pink">彩度</span>）の調整、まとめ？。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/08/224853" target="_blank">「<span class="red">ImageMagick</span>」で写真の<span class="pink">ヒストグラム</span>平坦化（equalize）を試してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/03/22/111636" target="_blank">過去の桜の写真を、「<span class="red">ImageMagick</span>」の<span class="pink">ヒストグラム</span>平坦化で明るい感じにしてみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/11/24/101431" target="_blank">露出アンダー、露出オーバー写真の<span class="red">JTrim</span>ガンマ補正を実験</a></li></ul>
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/01/29/135013" target="_blank"><span class="red">GIMP</span>で、写真の<span class="pink">ビネット効果</span>（周辺減光補正）を試してみた。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/04/130041" target="_blank"><span class="red">Photoshop Express</span>の「<span class="pink">ビネット効果</span>」＋「<span class="pink">もやの除去</span>」を試す。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/04/11/151425" target="_blank"><span class="red">Photoshop Express</span>の<span class="pink">カラー補正機能</span>を試す。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2021/01/23/163807" target="_blank">Webブラウザで写真編集ができるサイト「<span class="red">Polarr</span>」で、<span class="pink">色の調整</span>と、もや・かすみ</span>の除去を試す。</a></li></ul>
+
+<!--
+<span class="red"></span>
+<span class="pink"></span>
+
+	<ul><li><a href="" target="_blank"></a></li></ul>
+-->
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/11/13/152023" target="_blank"><span class="red">SILKYPIX JPEG Photography 10</span>）<span class="pink">露出補正</span>。</a></li></ul>
+
+
+
+
+
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>色加工</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/06/14/164745" target="_blank">写真をビビッドに加工する。<span class="pink">彩度</span>調整を「<span class="red">GIMP</span>」と「<span class="red">JTrim</span>」で試してみる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/03/21/165144" target="_blank"><span class="red">GIMP</span>で、写真の<span class="pink">色相</span>を変えてみた。（カラーバランス調整）</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/02/29/161613" target="_blank"><span class="red">GIMP</span>のトーンカーブで、写真の<span class="pink">色相</span>を変えてみる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/03/161420" target="_blank"><span class="red">GIMP</span>）<span class="pink">色レベル</span>調整：白背景が灰色っぽくくすんでしまった写真を明るくする。ホワイトバランス調整にも使える。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/03/165125" target="_blank"><span class="red">GIMP</span>）「色相-彩度」で花の写真の<span class="pink">色相</span>を変えてみる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/03/04/131814" target="_blank"><span class="red">GIMP</span>のチャンネルミキサーを使って、写真の<span class="pink">色合い</span>を変えてみる。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/11/28/100955" target="_blank">セピアカラーの写真の<span class="pink">色相</span>を変えてみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/11/25/213654" target="_blank">デジカメ写真の<span class="pink">色相</span>を変えると、アートっぽくなる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/02/29/145009" target="_blank"><span class="red">GIMP</span>のトーンカーブで写真を<span class="pink">レトロ</span>っぽくする。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2021/07/06/171925" target="_blank"><span class="red">GIMP</span>）<span class="pink">色調補正</span>「<span class="pink">ティール&オレンジ</span>」をトーンカーブで。BBCドラマやハリウッド映画風？。</a></li></ul>
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/01/27/212651" target="_blank"><span class="red">GIMP</span>プラグインスクリプト「Cross processing effect...」で写真を<span class="pink">レトロ</span>調に加工してみる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/01/27/223037" target="_blank"><span class="red">GIMP</span>で<span class="pink">レトロ</span>調にした写真を、さらに<span class="red">GIMP</span>で色加工してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/03/08/170117" target="_blank"><span class="red">GIMP</span>で写真加工。<span class="pink">モノクロ化</span>、<span class="pink">粒状感</span>、色味付け。レトロ化。<span class="pink">色温度</span>。</a></li></ul>
+
+
+
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/11/08/141900" target="_blank"><span class="red">SILKYPIX JPEG Photography 10</span>）<span class="pink">色温度、色偏差</span>の調整。</a></li></ul>
+
+
+
+
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/24/155318" target="_blank"><span class="red">Photoshop Express</span>のフィルター「基本」「自然」で遊ぶ。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/24/151052" target="_blank"><span class="red">Photoshop Express</span>のモノクロ(<span class="pink">白黒</span>)ピンホール写真がなかなかいい感じ。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/27/130417" target="_blank"><span class="pink">モノクロ</span>人物写真（オードリーヘプバーン）を<span class="red">Photoshop Express</span>で加工。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/26/093436" target="_blank">スマホ無料アプリ<span class="red">Lightroom</span>プリセット「クリエイティブ」を試す。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/07/26/095515" target="_blank">スマホ無料アプリ<span class="red">Lightroom</span>プリセット「<span class="pink">白黒</span>」を試す。</a></li></ul>
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>色補正・色加工（CSS）</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/14/152603" target="_blank">CSS Filterを使えば、簡単に色調加工ができる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/17/182430" target="_blank">影付き枠＋<span class="pink">ビネット効果</span>付き写真サムネイルアルバムのポップアップ拡大画像に<span class="pink">ビネット効果</span>。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/23/111055" target="_blank">影付き枠＋<span class="pink">ビネット効果</span>付き写真サムネイルアルバムの大阪版、京都版作成。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/15/091120" target="_blank">CSS「box-shadow」で、写真に<span class="pink">ビネット効果</span>をつけてみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/15/135029" target="_blank">CSSで写真を鉛筆画、色鉛筆画、水彩画風にエフェクト</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/15/150757" target="_blank">CSSで写真に影付きのシンプルな枠(フレーム)を付ける。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/15/155918" target="_blank">CSS）写真に影付きのシンプルな枠＋<span class="pink">ビネット効果</span></a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/19/135849" target="_blank">CSSのブレンドモード"background-blend-mode"を使うと写真にカラーフィルタをかけたような色の加工ができる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/02/28/112119" target="_blank">CSSのブレンドモード"background-blend-mode"を使って、写真を2枚重ねたイメージの作成を試した。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/03/31/112337" target="_blank">CSSでInstagram風の写真加工が簡単にできる「instagram.css」を試してみた。</a></li></ul>
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>アート加工</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/06/30/141344" target="_blank">写真でアート：<span class="red">GIMP</span>プラグイン「<span class="red">G'MIC</span>」の「Artistic」フィルター［Black Crayon Graffiti］［Hough Sketch］［Make Squiggly］を使って写真を加工。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/02/105401" target="_blank">写真でアート：<span class="red">GIMP</span>プラグイン「<span class="red">G'MIC</span>」の「Artistic」フィルター［Black Crayon Graffiti］［Ellipsionism］［Hough Sketch］を使って写真を加工。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/12/13/191514" target="_blank">写真でアート：<span class="red">GIMP</span>の「しきい値」で作成した白黒画像と重ねて合成してみる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/12/14/114349" target="_blank">写真でアート：<span class="red">GIMP</span>の「しきい値」で作成した白黒画像と重ねて合成してみる。（２）</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/12/16/194746" target="_blank">写真でアート：<span class="red">GIMP</span>の「しきい値」で作成した白黒画像と重ねて合成してみる。（３）アンディ・ウォーホルっぽい（？）</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/12/16/203823" target="_blank">写真でアート：黄色系の花や葉の写真を<span class="red">GIMP</span>の「Linear Invert」で加工するとオシャレなアートに（？）</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/05/24/165104" target="_blank">Photoshopを使わずに、<span class="red">GIMP</span>プラグイン「<span class="red">G'MIC</span>」で、簡単な手順で写真をイラスト風にする。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/05/24/184443" target="_blank">Photoshopを使わずに、<span class="red">GIMP</span>で簡単な手順で写真をイラスト風にする（続き）。単色カラーマスク合成。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/04/24/222743" target="_blank">写真を鉛筆画、ペン画、版画、水彩画、油彩画のような絵画調に変換する「<span class="red">FotoSketcher</span>」</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/05/17/210142" target="_blank">過去のフイルムカメラの写真を、<span class="red">FotoSketcher</span>「カートーン1」で鮮やかでおしゃれな絵画調に加工する。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/01/21/141216" target="_blank">「<span class="red">FotoSketcher</span>」の水彩画のパラメーターの値を変えて試してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/01/21/153324" target="_blank">「<span class="red">FotoSketcher</span>」の水彩画のパラメーターの値を変えて試してみた（続き）。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/25/200029" target="_blank">北浜散策で撮った写真を「<span class="red">FotoSketcher</span>」で水彩画風に加工してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/12/13/172132" target="_blank"><span class="red">FotoSketcher</span>のペイント10（ブラシストローク画）で、写真をゴッホ風にする。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/08/03/140636" target="_blank">月山周辺で撮った写真を<span class="red">FotoSketcher</span>の「ペイント5（水彩画）」でアート風に。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/05/03/165520" target="_blank">タマネギの写真を<span class="red">FotoSketcher</span>「ペイント10（ブラシストローク画）」でアートっぽく。</a></li></ul>
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/01/23/102010" target="_blank">モノクロ人物写真（オードリーヘプバーン）を「<span class="red">FotoSketcher</span>」で絵画調に。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/03/15/112612" target="_blank"><span class="red">GIMP</span>グラデーションで部分的に<span class="pink">半透明</span>にした写真を重ねる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/03/17/130102" target="_blank"><span class="red">Fotor</span>で、写真におしゃれな<span class="pink">透過文字</span>入れを入れる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/01/28/132051" target="_blank">写真から<span class="pink">輪郭</span>抽出した画像に<span class="red">Adobe Photoshop Sketch</span>の水彩ブラシで色を付けてみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/02/14/230258" target="_blank">画像加工で、ウユニ塩湖っぽく水に反射する写真をつくる。</a></li></ul>
+
+
+
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/11/07/144720" target="_blank">「<span class="red">SILKYPIX JPEG Photography 10</span>」の<span class="pink">プリセット「テイスト」</span>を試してみた。</a></li></ul>
+
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/08/29/134039" target="_blank"><span class="red">GIMP</span>）風景写真を<span class="pink">アニメ風イラスト</span>に加工。<span class="red">G'MIC</span>「Retinex」＋彩度UP。</a></li></ul>
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/08/29/144048" target="_blank"><span class="red">GIMP</span>）風景写真を<span class="pink">アニメ風イラスト</span>に加工。(<span class="red">G'MIC</span>)Retinex＋Boost Chromaticity</a></li></ul>
+
+
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>モノクロ・グレースケール</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/28/175049" target="_blank">複数の写真をまとめて一括で<span class="pink">モノクロ（グレースケール）</span>に変換する方法。「<span class="red">縮小専用</span>」「<span class="red">JTrim</span>」「<span class="red">ImageMagick</span>」</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/06/27/164018" target="_blank"><span class="pink">粒子感</span>のある<span class="pink">モノクロ</span>写真：<span class="red">GIMP</span>プラグイン「<span class="red">G'MIC</span>」＋<span class="red">GIMP</span>フィルター「CIE Ich Noise」を使って加工。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/01/27/180942" target="_blank">写真から<span class="pink">輪郭</span>抽出。アプリ「<span class="red">Adobe Capture CC</span>」「<span class="red">FotoSketcher</span>」「<span class="red">GIMP</span>」...を試してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/08/15/154851" target="_blank"><span class="pink">白黒（モノクロ）</span>写真をディープラーニング（AI）を使ってカラー写真に変換してくれるサービス。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/26/123725" target="_blank"><span class="red">GIMP</span>（<span class="red">G'MIC</span>）と、<span class="red">FotoSketcher</span>で<span class="pink">モノクロ</span>写真をアート加工。</a></li></ul>
+	<ul><li><a href="" target="_blank"></a></li></ul>
+
+
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/11/08/154901" target="_blank"><span class="red">SILKYPIX JPEG Photography 10</span>）写真の<span class="pink">モノクロ化</span>。</a></li></ul>
+
+
+
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>合成加工</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/11/02/173131" target="_blank"><span class="red">GIMP</span>で4枚の写真を<span class="pink">合成</span>。コスモスの写真で試す。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/11/01/220507" target="_blank"><span class="red">GIMP</span>で2枚の写真を<span class="pink">合成</span>。<span class="red">FotoSketcher</span>で油絵風にした画像の<span class="pink">合成</span>も。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/10/19/112230" target="_blank">写真加工（エフェクト）：<span class="red">GIMP</span>プラグイン「<span class="red">G'MIC</span>」の「Details」フィルターを使って写真を加工。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/09/134104" target="_blank">写真でアート：<span class="red">GIMP</span>プラグイン「<span class="red">G'MIC</span>」の「Artistic」フィルター［Diffusion Tensors］を使って写真を加工。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/06/30/174808" target="_blank">写真でアート：<span class="red">GIMP</span>を使って、写真画像の一部を透過にして、別の画像と<span class="pink">合成</span>してアートを作成する。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/02/132445" target="_blank">写真でアート：写真の<span class="pink">色相</span>を変えた2枚のうち1枚を上下逆転して<span class="pink">合成</span>。<span class="red">GIMP</span>のレイヤーを使う。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/18/145810" target="_blank">写真でアート：モノクロ写真2枚を<span class="red">GIMP</span>のレイヤーで<span class="pink">合成</span>。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/03/04/133453" target="_blank"><span class="red">GIMP</span>を使って、写真2枚を重ねたイメージの作成を試した。（不透明度調整）</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/10/19/135133" target="_blank">iPadで写真の周辺（背景）<span class="pink">ボケ</span>を簡単につくれるアプリ「ぼかし加工」を試してみた。</a></li></ul>
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>ゆがみ補正・解像度補正</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/06/08/163142" target="_blank">魚眼レンズで撮った写真の<span class="pink">歪み</span>を補正する「<span class="red">uonome</span>」を試してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/05/26/082853" target="_blank"><span class="red">GIMP</span>で、写真の<span class="pink">ゆがみ</span>を補正する。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/11/19/153002" target="_blank">AIを使って写真の<span class="pink">解像度</span>を6倍にできるソフト「Topaz A.I. Gigapixel」を試してみた。</a></li></ul>
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>超広角・宙玉</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/06/09/085913" target="_blank">TG-5＋フィッシュアイコンバーターFCON-T01＋魚眼補正アプリ<span class="red">uonome</span>と、TG-5＋ロワジャパン0.7倍ワイコンを比較。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/08/17/163622" target="_blank">「<span class="red">Image Composite Editor</span>」を使って、ワイコンなしで<span class="pink">超広角</span>写真を作る。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/08/19/131032" target="_blank">「<span class="red">Image Composite Editor</span>」で作る<span class="pink">超広角</span>写真 at Kobe。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/08/29/105523" target="_blank">大阪西梅田界隈。SONY DSC-HX90Vで撮影して、<span class="red">Image Composite Editor</span>で<span class="pink">超広角</span><span class="pink">合成</span>写真。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/08/16/110731" target="_blank">任意のサイトの写真で<span class="pink">宙玉</span>(そらたま)写真が作れるサイトを作ってみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/08/15/154253" target="_blank">JavaScriptで<span class="pink">宙玉</span>(そらたま)写真を作れる「SORA-TAMA Transform (Fish-Eye)」を試してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/03/08/225539" target="_blank">オリンパス Tough TG-5用の<span class="pink">宙玉</span>レンズ「GIZMON x ZENJIX soratama 55 for TG」を購入。</a></li></ul>
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>印刷</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/03/145430" target="_blank">写真から作成したアート作品をプリンターで印刷してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/01/26/135259" target="_blank">モノクロ人物絵画調写真を銅版画用紙で印刷したら、いい感じになった。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/11/29/160702" target="_blank">自分で撮った写真で2019年<span class="pink">カレンダー</span>をつくってみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/12/01/145527" target="_blank">自分で撮った写真で卓上型<span class="pink">カレンダー</span>をつくってみた。</a></li></ul>
+</div>
+<!-- ********************* -->
+<div class="section">
+	<p>その他</p>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/12/21/143023" target="_blank">パナソニックのデジカメ写真の<span class="pink">EXIF</span>から、フォトスタイル、クリエイティブコントロール情報を抜き出して、画像ファイル名に<span class="pink">EXIF</span>情報を付け足す。（<span class="red">ExifTool/JScript</span>）</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/11/29/093518" target="_blank">ソニーのデジカメ写真の<span class="pink">EXIF</span>から、クリエイティブスタイル、ピクチャーエフェクト情報を抜き出して、画像ファイル名に<span class="pink">EXIF</span>情報を付け足す。（<span class="red">ExifTool/JScript</span>）</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/07/05/173824" target="_blank">写真と絵画の縦横比（アスペクト比）を考えてみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2018/05/17/150805" target="_blank">デジカメの<span class="pink">センサーサイズ</span>と<span class="pink">ボケ</span>の関係が画像で確認できるサイト「<span class="red">DOF simulator</span>」</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/01/17/145532" target="_blank">PowerShot SX70 HSの35mm判換算焦点距離を<span class="red">exiftool</span>で調べる。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2020/01/14/103532" target="_blank">キヤノン PowerShot SX70 HSの「スタイル設定」を試してみた。</a></li></ul>
+	<ul><li><a href="https://2ndart.hatenablog.com/entry/2019/06/24/141746" target="_blank">写真家「山沢栄子」っぽい写真を、LUMIX DC-LX100M2（L.モノクロームD：粒状モード）で撮ってみた。</a></li></ul>
+
+</div>
+<!-- ********************* -->
+<footer>
+<div id="page_footer"><p style="margin:0;"><a href="https://2ndart.hatenablog.com/" style="font-size:16px;color:#fff;text-decoration:none;"></p>晴歩雨描</div>
+</footer>
+</body>
+</html>
