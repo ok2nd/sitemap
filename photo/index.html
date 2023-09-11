@@ -1076,7 +1076,15 @@ $(function() {
 		ordering: false,	// ソートしない
 		mark: true		// 検索文字列ハイライト (by mark.js)
 	});
+	var searchQuery = getUrlParameter('s');	// URLから検索文字列を取得
+	table.search(searchQuery).draw();	// 検索文字列セット
 });
+function getUrlParameter(name) {
+	name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+	var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+	var results = regex.exec(location.search);
+	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 </script>
 </body>
 </html>
