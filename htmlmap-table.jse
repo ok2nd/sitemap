@@ -72,7 +72,7 @@ for (var i=0; i<line_ary.length; i++) {
 			sw_category = false;
 			sw_publish = false;
 			category = '';		// 「STATUS: Draft」もクリア
-			title = line_ary[i].slice(7);
+			title = line_ary[i].slice(7).replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 		}
 		if (line_ary[i].substring(0,9) == 'BASENAME:') {
 			url = line_ary[i].slice(10);
