@@ -8269,10 +8269,13 @@ $(document).ready(function () {
 		var inputTextValue = $(this).val();
 		var currentURL = window.location.href;
 		if (currentURL.indexOf('?') !== -1) {
+			// パラメーターがすでに存在する場合は置き換える
 			var updatedURL = currentURL.replace(/(\?|&)search=.*?(&|$)/, '$1search=' + encodeURIComponent(inputTextValue) + '$2');
 		} else {
+			// パラメーターが存在しない場合は新しく追加する
 			var updatedURL = currentURL + '?search=' + encodeURIComponent(inputTextValue);
 		}
+		// ブラウザの履歴を変更せずにURLを更新
 		window.history.replaceState({ path: updatedURL }, '', updatedURL);
 		// DataTablesの検索フィルターを更新
 		table.search(inputTextValue).draw();
