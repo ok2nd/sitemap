@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
 <title>はてなブログ 晴歩雨描 記事一覧</title>
-<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 <style>
 body {
 	margin: 10px;
@@ -8218,57 +8218,28 @@ mark {
 </tbody>
 </table>
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-	// DataTablesの初期化
+$(function() {
 	var table = $('#dataTable').DataTable({
-		language: {		// 日本語化
-			"sProcessing": "処理中...",
-			"sLengthMenu": "表示 _MENU_ 件",
-			"sZeroRecords": "検索結果がありません",
-			"sInfo": " _TOTAL_ 件中 _START_ から _END_ まで表示",
-			"sInfoEmpty": " 0 件中 0 から 0 まで表示",
-			"sInfoFiltered": "（全 _MAX_ 件より抽出）",
-			"sInfoPostFix": "",
-			"sSearch": "検索:",
-			"sUrl": "",
-			"oPaginate": {
-				"sFirst": "先頭",
-				"sPrevious": "前",
-				"sNext": "次",
-				"sLast": "最終"
-			}
+		language: {	// 日本語化
+			url: "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
 		},
 		paging: false,		// ページングしない。
 		ordering: false,	// ソートしない。
 		mark: true		// 検索文字列ハイライト (by mark.js)
 	});
-	// DataTablesが生成する検索ボックスを取得
-	var searchInput = $('div.dataTables_filter input');
-	// ページの読み込み時にURLからパラメーターを読み取って検索フィルターに反映
-	var urlParams = new URLSearchParams(window.location.search);
-	var searchParam = urlParams.get('search');
-	if (searchParam !== null) {
-		searchInput.val(decodeURIComponent(searchParam));
-		table.search(decodeURIComponent(searchParam)).draw();
-	}
-	// テキストボックスの入力が変更されたときにURLを更新（?search=xxx）
-	searchInput.on('input', function () {
-		var inputTextValue = $(this).val();
-		var currentURL = window.location.href;
-		if (currentURL.indexOf('?') !== -1) {
-			var updatedURL = currentURL.replace(/(\?|&)search=.*?(&|$)/, '$1search=' + encodeURIComponent(inputTextValue) + '$2');
-		} else {
-			var updatedURL = currentURL + '?search=' + encodeURIComponent(inputTextValue);
-		}
-		window.history.replaceState({ path: updatedURL }, '', updatedURL);
-		// DataTablesの検索フィルターを更新
-		table.search(inputTextValue).draw();
-	});
+	var searchQuery = getUrlParameter('s');	// URLから検索文字列を取得
+	table.search(searchQuery).draw();	// 検索文字列セット
 });
+function getUrlParameter(name) {
+	name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+	var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+	var results = regex.exec(location.search);
+	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 </script>
 </body>
 </html>
