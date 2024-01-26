@@ -40,6 +40,14 @@ mark {
 </thead>
 <tbody>
 <tr>
+<td class="category">ホームページ、Web作成 ＜AI＞</td>
+<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2024/01/26/221009">「ブログ記事一覧」の検索ボックスの文字列を、URLに反映できるようにした。</a> <span style="color:Orangered;">2024/01/26</span></td>
+</tr>
+<tr>
+<td class="category">ホームページ、Web作成 ＜AI＞</td>
+<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2024/01/26/204226">HTML&lt;INPUT&gt;テキストボックスに入力されている文字列を、リアルタイムにURLのパラメーターに反映する方法。ChatGPT(3.5)に教えてもらった。</a> <span style="color:Orangered;">2024/01/26</span></td>
+</tr>
+<tr>
 <td class="category">写真・カメラ 神戸</td>
 <td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2024/01/26/123103">神戸）北野。SONY α5100＋SIGMA 90mm F2.8。</a> <span style="color:Orangered;">2024/01/26</span></td>
 </tr>
@@ -457,7 +465,7 @@ mark {
 </tr>
 <tr>
 <td class="category">ホームページ、Web作成 写真・カメラ はてなブログ ＜AI＞</td>
-<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2023/09/11/174432">jQueryプラグイン「DataTables」のWebページに検索文字列を初期設定できるようにした。ChatGPT(3.5)に教えてもらった。</a> <span style="color:Orangered;">2023/09/11</span></td>
+<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2023/09/11/174432">jQueryプラグイン「DataTables」のWebページ(URL)に検索文字列を初期設定できるようにした。ChatGPT(3.5)に教えてもらった。</a> <span style="color:Orangered;">2023/09/11</span></td>
 </tr>
 <tr>
 <td class="category">写真・カメラ</td>
@@ -8248,6 +8256,7 @@ $(document).ready(function () {
 	});
 	// DataTablesが生成する検索ボックスを取得
 	var searchInput = $('div.dataTables_filter input');
+	//                   ↑INPUTボックス名はテーブル名+"_filter"になる
 	// ページの読み込み時にURLからパラメーターを読み取って検索フィルターに反映
 	var urlParams = new URLSearchParams(window.location.search);
 	var searchParam = urlParams.get('search');
