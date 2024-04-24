@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="ja">
 <head>
+<!--
+「検索文字列を初期設定」適用版。
+https://2ndart.hatenablog.com/entry/2023/09/11/174432
+
+「検索ボックスの文字列をURLに反映」適用前版。
+https://2ndart.hatenablog.com/entry/2024/01/26/221009
+-->
 <meta charset="utf-8">
 <meta name="author" content="footpath2nd@gmail.com">
 <meta name="keywords" content="digital camera">
@@ -1117,57 +1124,24 @@ mark {
 <!-- https://datatables.net/blog/2017-01-19 -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
 <script type="text/javascript">
-$(document).ready(function () {
-	// DataTablesの初期化
+$(function() {
 	var table = $('#dataTable').DataTable({
-		language: {		// 日本語化
-			"sProcessing": "処理中...",
-			"sLengthMenu": "表示 _MENU_ 件",
-			"sZeroRecords": "検索結果がありません",
-			"sInfo": " _TOTAL_ 件中 _START_ から _END_ まで表示",
-			"sInfoEmpty": " 0 件中 0 から 0 まで表示",
-			"sInfoFiltered": "（全 _MAX_ 件より抽出）",
-			"sInfoPostFix": "",
-			"sSearch": "検索:",
-			"sUrl": "",
-			"oPaginate": {
-				"sFirst": "先頭",
-				"sPrevious": "前",
-				"sNext": "次",
-				"sLast": "最終"
-			}
+		language: {	// 日本語化
+			url: "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
 		},
 		paging: false,		// ページングしない。
-		ordering: false,	// ソートしない。
+		ordering: false,	// ソートしない
 		mark: true		// 検索文字列ハイライト (by mark.js)
 	});
-	// DataTablesが生成する検索ボックスを取得
-	var searchInput = $('div.dataTables_filter input');
-	//                   ↑INPUTボックス名はテーブル名+"_filter"になる
-	// ページの読み込み時にURLからパラメーターを読み取って検索フィルターに反映
-	var urlParams = new URLSearchParams(window.location.search);
-	var searchParam = urlParams.get('search');
-	if (searchParam !== null) {
-		searchInput.val(decodeURIComponent(searchParam));
-		table.search(decodeURIComponent(searchParam)).draw();
-	}
-	// テキストボックスの入力が変更されたときにURLを更新（?search=xxx）
-	searchInput.on('input', function () {
-		var inputTextValue = $(this).val();
-		var currentURL = window.location.href;
-		if (currentURL.indexOf('?') !== -1) {
-			// パラメーターがすでに存在する場合は置き換える
-			var updatedURL = currentURL.replace(/(\?|&)search=.*?(&|$)/, '$1search=' + encodeURIComponent(inputTextValue) + '$2');
-		} else {
-			// パラメーターが存在しない場合は新しく追加する
-			var updatedURL = currentURL + '?search=' + encodeURIComponent(inputTextValue);
-		}
-		// ブラウザの履歴を変更せずにURLを更新
-		window.history.replaceState({ path: updatedURL }, '', updatedURL);
-		// DataTablesの検索フィルターを更新
-		table.search(inputTextValue).draw();
-	});
+	var searchQuery = getUrlParameter('s');	// URLから検索文字列を取得
+	table.search(searchQuery).draw();	// 検索文字列セット
 });
+function getUrlParameter(name) {
+	name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+	var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+	var results = regex.exec(location.search);
+	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 </script>
 </body>
 </html>
