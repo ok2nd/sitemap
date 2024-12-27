@@ -36,6 +36,7 @@ $(document).ready(function () {
 	if (searchParam !== null) {
 		searchInput.val(decodeURIComponent(searchParam));
 		table.search(decodeURIComponent(searchParam)).draw();
+		document.title = '晴歩雨描「' + searchParam + '」記事一覧';
 	}
 	// テキストボックスの入力が変更されたときにURLを更新（?search=xxx）
 	searchInput.on('input', function () {
@@ -52,6 +53,11 @@ $(document).ready(function () {
 		window.history.replaceState({ path: updatedURL }, '', updatedURL);
 		// DataTablesの検索フィルターを更新
 		table.search(inputTextValue).draw();
+		if (inputTextValue != '') {
+			document.title = '晴歩雨描「' + inputTextValue + '」記事一覧';
+		} else {
+			document.title = '晴歩雨描：記事一覧';
+		}
 	});
 });
 </script>
