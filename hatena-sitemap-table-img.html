@@ -5749,7 +5749,7 @@ mark {
 <td class="category">コンピュータ ホームページ、Web作成 写真・カメラ</td>
 
 <td class="img"><a target="_blank" href="https://2ndart.hatenablog.com/entry/2021/12/30/124355"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/art2nd/20211230/20211230113757.jpg"></img></a></td>
-<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2021/12/30/124355">自分で撮った写真で2022年カレンダー。</a> <span style="color:Orangered;">2021/12/30</span></td>
+<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2021/12/30/124355">自分で撮った写真で2022年壁掛けカレンダー。</a> <span style="color:Orangered;">2021/12/30</span></td>
 </tr>
 <tr>
 <td class="category">写真・カメラ 神戸 スマホ・タブレット</td>
@@ -7591,7 +7591,7 @@ mark {
 <td class="category">コンピュータ 写真・カメラ</td>
 
 <td class="img"><a target="_blank" href="https://2ndart.hatenablog.com/entry/2020/12/09/154657"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/art2nd/20201209/20201209153904.jpg"></img></a></td>
-<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2020/12/09/154657">自分で撮った写真で2021年カレンダー作成。（CubePDF使用）</a> <span style="color:Orangered;">2020/12/09</span></td>
+<td><a target="_blank" href="https://2ndart.hatenablog.com/entry/2020/12/09/154657">自分で撮った写真で2021年壁掛けカレンダー作成。（CubePDF使用）</a> <span style="color:Orangered;">2020/12/09</span></td>
 </tr>
 <tr>
 <td class="category">ハイキング 紅葉 野鳥 マップ付</td>
@@ -13984,24 +13984,83 @@ mark {
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js),datatables.mark.js"></script>
 <script type="text/javascript">
-$(function() {
+$(document).ready(function () {
+	// DataTablesの初期化
 	var table = $('#dataTable').DataTable({
-		language: {	// 日本語化
-			url: "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+		language: {		// 日本語化
+			"sProcessing": "処理中...",
+			"sLengthMenu": "表示 _MENU_ 件",
+			"sZeroRecords": "検索結果がありません",
+			"sInfo": " _TOTAL_ 件中 _START_ から _END_ まで表示",
+			"sInfoEmpty": " 0 件中 0 から 0 まで表示",
+			"sInfoFiltered": "（全 _MAX_ 件より抽出）",
+			"sInfoPostFix": "",
+			"sSearch": "検索:",
+			"sUrl": "",
+			"oPaginate": {
+				"sFirst": "先頭",
+				"sPrevious": "前",
+				"sNext": "次",
+				"sLast": "最終"
+			}
 		},
-		paging: true,		// ページングする。
+		paging: false,		// ページングしない。
 		ordering: false,	// ソートしない。
 		mark: true		// 検索文字列ハイライト (by mark.js)
 	});
-	var searchQuery = getUrlParameter('s');	// URLから検索文字列を取得
-	table.search(searchQuery).draw();	// 検索文字列セット
+	// DataTablesが生成する検索ボックスを取得
+	var searchInput = $('div.dataTables_filter input');
+	//                   ↑INPUTボックス名はテーブル名+"_filter"になる
+	// ページの読み込み時にURLからパラメーターを読み取って検索フィルターに反映
+	var urlParams = new URLSearchParams(window.location.search);
+	var searchParam = urlParams.get('search');
+	if (searchParam !== null) {
+		searchInput.val(decodeURIComponent(searchParam));
+		table.search(decodeURIComponent(searchParam)).draw();
+		document.title = '晴歩雨描「' + searchParam + '」記事一覧';
+	}
+	// テキストボックスの入力が変更されたときにURLを更新（?search=xxx）
+	searchInput.on('input', function () {
+		var inputTextValue = $(this).val();
+		var currentURL = window.location.href;
+		if (currentURL.indexOf('?') !== -1) {
+			// パラメーターがすでに存在する場合は置き換える
+			var updatedURL = currentURL.replace(/(\?|&)search=.*?(&|$)/, '$1search=' + encodeURIComponent(inputTextValue) + '$2');
+		} else {
+			// パラメーターが存在しない場合は新しく追加する
+			var updatedURL = currentURL + '?search=' + encodeURIComponent(inputTextValue);
+		}
+		// ブラウザの履歴を変更せずにURLを更新
+		window.history.replaceState({ path: updatedURL }, '', updatedURL);
+		// DataTablesの検索フィルターを更新
+		table.search(inputTextValue).draw();
+		if (inputTextValue != '') {
+			document.title = '晴歩雨描「' + inputTextValue + '」記事一覧';
+		} else {
+			document.title = '晴歩雨描：記事一覧';
+		}
+	});
 });
-function getUrlParameter(name) {
-	name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-	var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-	var results = regex.exec(location.search);
-	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
+/*
+	$(function() {
+		var table = $('#dataTable').DataTable({
+			language: {	// 日本語化
+				url: "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+			},
+			paging: true,		// ページングする。
+			ordering: false,	// ソートしない。
+			mark: true		// 検索文字列ハイライト (by mark.js)
+		});
+		var searchQuery = getUrlParameter('s');	// URLから検索文字列を取得
+		table.search(searchQuery).draw();	// 検索文字列セット
+	});
+	function getUrlParameter(name) {
+		name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+		var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+		var results = regex.exec(location.search);
+		return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	}
+*/
 </script>
 </body>
 </html>
