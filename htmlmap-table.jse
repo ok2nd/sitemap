@@ -66,10 +66,11 @@ var bodyend = true;	// --------
 for (var i=0; i<line_ary.length; i++) {
 	if (!body) {
 		if (line_ary[i].substring(0,6) == 'TITLE:') {
-			if (sw_category && sw_publish) {
+		//	if (sw_category && sw_publish) {
+			if (title !== "" && sw_publish) {
 				html_write(category, title, url, ymd);
 			}
-			sw_category = false;
+		//	sw_category = false;
 			sw_publish = false;
 			category = '';		// 「STATUS: Draft」もクリア
 			title = line_ary[i].slice(7).replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -98,7 +99,9 @@ for (var i=0; i<line_ary.length; i++) {
 		body = false;
 	}
 }
-html_write(category, title, url, ymd);		// 最後の1件
+if (title !== "" && sw_publish) {
+	html_write(category, title, url, ymd);		// 最後の1件
+}
 stw.WriteText('\n</tbody>\n</table>\n');
 
 var sr3 = new ActiveXObject("ADODB.Stream");
