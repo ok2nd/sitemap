@@ -13,9 +13,9 @@ table {
 /* PC環境：1列目を「全体の20%」または「固定ピクセル」でがっちり固定 */
 table th:nth-child(1),
 table td:nth-child(1) {
-    width: 160px !important;       /* 幅を160pxに完全固定（％ではなくpxで固定） */
-    min-width: 160px !important;   /* これ以上縮まないようにするガード */
-    max-width: 160px !important;   /* これ以上広がらないようにするガード */
+    width: 140px !important;       /* 幅を140pxに完全固定（％ではなくpxで固定） */
+    min-width: 140px !important;   /* これ以上縮まないようにするガード */
+    max-width: 140px !important;   /* これ以上広がらないようにするガード */
 }
 
 /* PC環境：2列目は残りのスペースをすべて使う */
@@ -34,19 +34,19 @@ table td:nth-child(2) {
         max-width: 100% !important; /* スマホでは最大幅の制限を解除 */
     }
 
-    /* スマホ環境：1列目を 25% に上書き */
+    /* スマホ環境：1列目を 20% に上書き */
     table th:nth-child(1),
     table td:nth-child(1) {
-        width: 25% !important;
-        min-width: 25% !important;
-        max-width: 25% !important;
+        width: 20% !important;
+        min-width: 20% !important;
+        max-width: 20% !important;
     }
 
-    /* スマホ環境：2列目を 75% に上書き */
+    /* スマホ環境：2列目を 80% に上書き */
     table th:nth-child(2),
     table td:nth-child(2) {
-        width: 75% !important;
-        min-width: 75% !important;
-        max-width: 75% !important;
+        width: 80% !important;
+        min-width: 80% !important;
+        max-width: 80% !important;
     }
 }
