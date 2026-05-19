@@ -1,0 +1,52 @@
+/* ===================================================
+   1. PC向けのレイアウト（テーブル全体の幅を固定して安定化）
+   =================================================== */
+table {
+    table-layout: fixed !important; /* 列幅固定の強制 */
+    width: 100% !important;         /* 画面や親要素の幅いっぱいに広げる（これで安定します） */
+    max-width: 900px !important;    /* 【重要】PCで広がりすぎないよう、最大の横幅を制限（数値はお好みで） */
+    margin: 0 auto !important;      /* テーブルを中央寄せにする */
+    word-break: break-all !important; 
+    border-collapse: collapse !important;
+}
+
+/* PC環境：1列目を「全体の20%」または「固定ピクセル」でがっちり固定 */
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 160px !important;       /* 幅を160pxに完全固定（％ではなくpxで固定） */
+    min-width: 160px !important;   /* これ以上縮まないようにするガード */
+    max-width: 160px !important;   /* これ以上広がらないようにするガード */
+}
+
+/* PC環境：2列目は残りのスペースをすべて使う */
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: auto !important;
+}
+
+
+/* ===================================================
+   2. スマホ向けのレイアウト（画面幅768px以下）
+   =================================================== */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100% !important;
+        max-width: 100% !important; /* スマホでは最大幅の制限を解除 */
+    }
+
+    /* スマホ環境：1列目を 25% に上書き */
+    table th:nth-child(1),
+    table td:nth-child(1) {
+        width: 25% !important;
+        min-width: 25% !important;
+        max-width: 25% !important;
+    }
+
+    /* スマホ環境：2列目を 75% に上書き */
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        width: 75% !important;
+        min-width: 75% !important;
+        max-width: 75% !important;
+    }
+}
